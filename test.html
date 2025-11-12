@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Folder Scatter Animation</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .folder {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .folder-icon {
+      width: 120px;
+      display: block;
+      z-index: 2;
+      position: relative;
+    }
+
+    .folder-item {
+      position: absolute;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    /* 初始位置（隨便散開一點） */
+    .poster  { top: -30px; left: 20px;  transform: rotate(-8deg) scale(0.9); }
+    .merch   { top: -20px; left: 60px;  transform: rotate(5deg) scale(0.9); }
+    .social  { top: -10px; left: 40px;  transform: rotate(12deg) scale(0.9); }
+
+    /* Hover 時歸位並顯示 */
+    .folder:hover .folder-item {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+
+    .folder:hover .poster  { top: -100px; left: -40px; }
+    .folder:hover .merch   { top: -120px; left:  60px; }
+    .folder:hover .social  { top: -100px; left: 30px; }
+  </style>
+</head>
+<body>
+
+  <div class="folder">
+    <img src="./assets/folderGraphic.png" class="folder-icon" alt="Folder">
+    
+    <img src="./assets/c.png" class="folder-item social" alt="Social Media">
+    <img src="./assets/a.png" class="folder-item poster" alt="Poster">
+    <img src="./assets/b.png"  class="folder-item merch" alt="Merch">
+
+  </div>
+
+</body>
+</html>
