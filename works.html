@@ -40,46 +40,73 @@
 
 <body>
 
-  <div class="min-h-screen min-w-screen flex flex-col justify-between"> 
+    <div class="min-h-screen min-w-screen flex flex-col justify-between"> 
 
-    <div class="flex justify-between">
-        <a href="./index.html" class="text-2xl md:text-4xl font-bold p-4">
-            <h1>HSU, CHEN-HSUAN<br>Portfolio</h1>
-        </a>
+        <!-- Navbar -->
+        <header class="w-full flex items-center justify-between p-4">
+            <a href="./index.html" class="text-2xl md:text-4xl font-bold leading-tight">
+                HSU, CHEN-HSUAN<br>Portfolio
+            </a>
 
-        <div class="flex justify-center items-center gap-6 p-4 text-xl">
-          <!-- 第一張貼紙 -->
-            <a href="./about.html" class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
+            <nav class="hidden md:flex justify-center items-center gap-6 text-xl">
+                <a href="./about.html"
+                class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
+                about
+                </a>
+
+                <a href="./works.html"
+                class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
+                works
+                </a>
+
+                <a href="./CV.html"
+                class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
+                resume
+                </a>
+            </nav>
+
+            <!-- 右：手機版漢堡 -->
+            <button
+                class="md:hidden p-2 rounded hover:bg-[#F8C982]"
+                aria-label="Toggle navigation"
+                onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
+                <span class="block w-6 h-0.5 bg-[#083A75] mb-1"></span>
+                <span class="block w-6 h-0.5 bg-[#083A75] mb-1"></span>
+                <span class="block w-6 h-0.5 bg-[#083A75]"></span>
+            </button>
+        </header>
+
+        <!-- 🔹 手機版展開選單 -->
+        <nav id="mobile-nav" class="md:hidden hidden px-4 pb-3 flex flex-col items-end gap-2 text-base">
+            <a href="./about.html"
+                class="px-4 py-1 rounded-full bg-[#DA5512] text-white font-bold">
                 about
             </a>
-
-            <a href="./works.html" class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
+            <a href="./works.html"
+                class="px-4 py-1 rounded-full bg-[#083A75] text-white font-bold">
                 works
             </a>
-
-            <a href="./CV.html" class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
+            <a href="./CV.html"
+                class="px-4 py-1 rounded-full bg-[#DC6A0B] text-white font-bold">
                 resume
             </a>
+        </nav>
+            
+
+        <div class="flex justify-center">
+            <a href="./graphic.html">
+                <div class="place-items-center h-[50vh] p-2 cursor-pointer">
+                <img src="./assets/folder.png" class="p-1 mx-auto">
+                <div class="font-bold text-4xl text-center">Graphic</div>
+                </div>
+            </a>
         </div>
-        
-    </div>
 
-
-
-    <div class="flex justify-center">
-      <a href="./graphic.html">
-        <div class="place-items-center h-[50vh] p-2 cursor-pointer">
-          <img src="./assets/folder.png" class="p-1 mx-auto">
-          <div class="font-bold text-4xl text-center">Graphic</div>
+        <div class="p-4 text-gray-500 font-bold text-center">
+            zoe2746@gmail.com
         </div>
-      </a>
-    </div>
 
-    <div class="p-4 text-gray-500 font-bold text-center">
-      zoe2746@gmail.com
     </div>
-
-  </div>
 
 </body>
 </html>
