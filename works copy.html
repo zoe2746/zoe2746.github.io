@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chen-Hsuan Hsu</title>
+  <link rel="icon" type="image/png" href="./assets/icon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* 400 Regular */
+    @font-face {
+      font-family: 'SourceCodePro';
+      src: url('./assets/fonts/SourceCodePro-Regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* 700 Bold */
+    @font-face {
+      font-family: 'SourceCodePro';
+      src: url('./assets/fonts/SourceCodePro-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-style: bold;
+      font-display: swap;
+    }
+
+    /* 全站預設使用 */
+    body {
+        font-family: 'SourceCodePro', monospace;
+        background: #FCD9A0;
+        color: #083A75;
+        min-height: 100vh;
+        margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+    <div class="min-h-screen min-w-screen flex flex-col justify-between"> 
+
+        <!-- Navbar -->
+        <header class="w-full flex items-center justify-between p-4">
+            <a href="./index.html" class="text-2xl md:text-4xl font-bold leading-tight">
+                HSU, CHEN-HSUAN<br>Portfolio
+            </a>
+
+            <nav class="hidden md:flex justify-center items-center gap-6 text-xl">
+                <a href="./about.html"
+                class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
+                about
+                </a>
+
+                <a href="./works.html"
+                class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
+                works
+                </a>
+
+                <a href="./resume.html"
+                class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
+                resume
+                </a>
+            </nav>
+
+            <!-- 右：手機版漢堡 -->
+            <button
+            class="md:hidden p-2 rounded text-[#DC6A0B]"
+            aria-label="Toggle navigation"
+            onclick="
+                document.getElementById('mobile-nav').classList.toggle('hidden');
+                this.classList.toggle('text-[#DC6A0B]');
+                this.classList.toggle('text-[#DA5512]');
+            "
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <circle cx="18" cy="18" r="18" class="fill-current" />
+            </svg>
+            </button>
+
+
+
+        </header>
+
+        <!-- 手機版展開選單 -->
+        <nav id="mobile-nav" class="md:hidden hidden px-4 flex flex-col items-end gap-2 text-base">
+            <a href="./about.html"
+                class="px-2 pd-1 text-[#083A75] font-bold">
+                about
+            </a>
+            <a href="./works.html"
+                class="px-2 pd-1 text-[#DA5512] font-bold">
+                works
+            </a>
+
+            <a href="./resume.html"
+                class="px-2 pd-1 text-[#083A75] font-bold">
+                resume
+            </a>
+        </nav>
+            
+
+        <div class="p-10 grid grid-cols-1 gap-10 justify-center md:grid-cols-2 md:gap-10 lg:px-40 md:scale-100">
+
+            <a href="./solly.html" class="block">
+                <div class="relative cursor-pointer rounded-3xl h-[30vh] bg-cover bg-center hover:drop-shadow-2xl hover:scale-105 transition duration-300"
+                    style="background-image: url('./assets/solly/SollyPortfolio.png')">
+                    
+                    <div class="absolute top-3 right-3 bg-[#DA5512] text-white font-semibold px-3 py-1 rounded-full">
+                        UI/UX
+                    </div>
+
+
+                    <div class="absolute bottom-0 w-full bg-black/40 rounded-b-3xl backdrop-blur-sm py-3 px-4">
+                        <div class="text-white font-bold text-xl">
+                            Internship at AI SOLLY
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+
+            <a href="./metro.html" class="block">
+                <div class="relative cursor-pointer rounded-3xl h-[30vh] bg-cover bg-center hover:drop-shadow-2xl hover:scale-105 transition duration-300"
+                    style="background-image: url('./assets/metro/final-04.jpg')">
+                    
+                    <div class="absolute top-3 right-3 flex gap-2">
+
+                        <div class="bg-[#e4961c] text-white font-semibold px-3 py-1 rounded-full">
+                            1st place
+                        </div>
+
+                        <div class="bg-[#DA5512] text-white font-semibold px-3 py-1 rounded-full">
+                            UI/UX
+                        </div>
+
+                    </div>
+                    
+                    <div class="absolute bottom-0 w-full bg-black/40 rounded-b-3xl backdrop-blur-sm py-3 px-4">
+                        <div class="text-white font-bold text-xl">
+                            Taipei Metro Hackathon
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+
+            <a href="./graphic.html" class="block">
+                <div class="relative cursor-pointer rounded-3xl h-[30vh] bg-cover bg-center hover:drop-shadow-2xl hover:scale-105 transition duration-300"
+                    style="background-image: url('./assets/csie_camp/final-13.jpg')">
+                    
+                    <div class="absolute top-3 right-3 bg-[#083A75] text-white font-semibold px-3 py-1 rounded-full">
+                        Graphic
+                    </div>
+
+
+                    <div class="absolute bottom-0 w-full bg-black/40 rounded-b-3xl backdrop-blur-sm py-3 px-4">
+                        <div class="text-white font-bold text-xl">
+                            NTNU CSIP Camp
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+
+            <a href="./rome.html" class="block">
+                <div class="relative cursor-pointer rounded-3xl h-[30vh] bg-cover bg-center hover:drop-shadow-2xl hover:scale-105 transition duration-300"
+                    style="background-image: url('./assets/rome_gelato.png')">
+                    
+                    <div class="absolute top-3 right-3 bg-[#083A75] text-white font-semibold px-3 py-1 rounded-full">
+                        Graphic
+                    </div>
+
+
+                    <div class="absolute bottom-0 w-full bg-black/40 rounded-b-3xl backdrop-blur-sm py-3 px-4">
+                        <div class="text-white font-bold text-xl">
+                            Exchange Program at Italy
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+
+            <a href="./uni.html" class="block hidden">
+                <div class="relative cursor-pointer rounded-3xl h-[30vh] bg-cover bg-center hover:drop-shadow-2xl hover:scale-105 transition duration-300"
+                    style="background-image: url('./assets/photoclub.jpg')">
+                    
+                    <div class="absolute top-3 right-3 bg-[#083A75] text-white font-semibold px-3 py-1 rounded-full">
+                        Graphic
+                    </div>
+
+
+                    <div class="absolute bottom-0 w-full bg-black/40 rounded-b-3xl backdrop-blur-sm py-3 px-4">
+                        <div class="text-white font-bold text-xl">
+                            University Extracurricular
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+
+        </div>
+
+    <!--FOOTER START-->
+    <div class="p-4 text-gray-500 font-bold text-center text-sm md:text-l">
+      <div>
+        <a href="https://www.linkedin.com/in/zoe2746/" 
+          class="underline hover:text-[#DA5512]" 
+          target="_blank">LinkedIn</a>
+        |
+        <a href="https://www.behance.net/zoe2746" 
+          class="underline hover:text-[#DA5512]" 
+          target="_blank">Behance</a>
+        |
+        <a href="mailto:zoe2746@gmail.com" 
+          class="underline hover:text-[#DA5512]">zoe2746@gmail.com</a>
+
+      </div>
+
+    </div>
+    <!--FOOTER END-->
+
+    </div>
+
+</body>
+</html>
