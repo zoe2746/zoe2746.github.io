@@ -42,56 +42,63 @@
 
         <!-- Navbar -->
         <header class="w-full flex items-center justify-between p-4">
-        <!-- 左：Logo / 名字 -->
-        <a href="./index.html" class="text-2xl md:text-4xl font-bold leading-tight">
-            HSU, CHEN-HSUAN<br>Portfolio
-        </a>
-
-        <!-- 右：桌機版導覽列 -->
-        <nav class="hidden md:flex justify-center items-center gap-6 text-xl">
-            <a href="./about.html"
-            class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
-            about
+            <!-- 左：Logo / 名字 -->
+            <a href="./index.html" class="text-2xl md:text-4xl font-bold leading-tight">
+                HSU, CHEN-HSUAN<br>Portfolio
             </a>
 
-            <a href="./works.html"
-            class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
-            works
-            </a>
+            <!-- 右：桌機版導覽列 -->
+            <nav class="hidden md:flex justify-center items-center gap-6 text-xl">
+                <a href="./about.html"
+                class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
+                about
+                </a>
 
-            <a href="./CV.html"
-            class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
-            resume
-            </a>
-        </nav>
+                <a href="./works.html"
+                class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
+                works
+                </a>
 
-        <!-- 右：手機版漢堡 -->
-        <button
-            class="md:hidden p-2 rounded hover:bg-[#F8C982]"
+                <a href="./CV.html"
+                class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
+                resume
+                </a>
+            </nav>
+
+            <!-- 右：手機版漢堡 -->
+            <button
+            class="md:hidden p-2 rounded text-[#DC6A0B]"
             aria-label="Toggle navigation"
-            onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
-            <span class="block w-6 h-0.5 bg-[#083A75] mb-1"></span>
-            <span class="block w-6 h-0.5 bg-[#083A75] mb-1"></span>
-            <span class="block w-6 h-0.5 bg-[#083A75]"></span>
-        </button>
+            onclick="
+                document.getElementById('mobile-nav').classList.toggle('hidden');
+                this.classList.toggle('text-[#DC6A0B]');
+                this.classList.toggle('text-[#DA5512]');
+            "
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <circle cx="18" cy="18" r="18" class="fill-current" />
+            </svg>
+            </button>
+
+
+
         </header>
 
-        <!-- 🔹 手機版展開選單 -->
+        <!-- 手機版展開選單 -->
         <nav id="mobile-nav" class="md:hidden hidden px-4 pb-3 flex flex-col items-end gap-2 text-base">
-        <a href="./about.html"
-            class="px-4 py-1 text-[#DA5512] font-bold">
-            about
-        </a>
-        <a href="./works.html"
-            class="px-4 py-1 text-[#083A75] font-bold">
-            works
-        </a>
-        <a href="./CV.html"
-            class="px-4 py-1 text-[#DC6A0B] font-bold">
-            resume
-        </a>
+            <a href="./about.html"
+                class="px-2 pd-1 text-[#DA5512] font-bold">
+                about
+            </a>
+            <a href="./works.html"
+                class="px-2 pd-1 text-[#083A75] font-bold">
+                works
+            </a>
+            <a href="./CV.html"
+                class="px-2 pd-1 text-[#083A75] font-bold">
+                resume
+            </a>
         </nav>
-
 
         <main class="flex-1 flex items-center justify-center px-4">
             <img src="./assets/about.png"> 
