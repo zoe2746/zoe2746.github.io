@@ -30,11 +30,9 @@
     body {
       font-family: 'SourceCodePro', monospace;
       background: #FCD9A0;
-      min-height: 100vh;
       color: #083A75;
       margin: 0;
     }
-
   </style>
 </head>
 
@@ -67,46 +65,63 @@
 
             <!-- 右：手機版漢堡 -->
             <button
-                class="md:hidden p-2 rounded hover:bg-[#F8C982]"
-                aria-label="Toggle navigation"
-                onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
-                <span class="block w-6 h-0.5 bg-[#083A75] mb-1"></span>
-                <span class="block w-6 h-0.5 bg-[#083A75] mb-1"></span>
-                <span class="block w-6 h-0.5 bg-[#083A75]"></span>
+            class="md:hidden p-2 rounded text-[#DC6A0B]"
+            aria-label="Toggle navigation"
+            onclick="
+                document.getElementById('mobile-nav').classList.toggle('hidden');
+                this.classList.toggle('text-[#DC6A0B]');
+                this.classList.toggle('text-[#DA5512]');
+            "
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <circle cx="18" cy="18" r="18" class="fill-current" />
+            </svg>
             </button>
+
+
+
         </header>
 
-        <!-- 🔹 手機版展開選單 -->
+        <!-- 手機版展開選單 -->
         <nav id="mobile-nav" class="md:hidden hidden px-4 pb-3 flex flex-col items-end gap-2 text-base">
             <a href="./about.html"
-                class="px-4 py-1 rounded-full bg-[#DA5512] text-white font-bold">
+                class="px-2 pd-1 text-[#083A75] font-bold">
                 about
             </a>
             <a href="./works.html"
-                class="px-4 py-1 rounded-full bg-[#083A75] text-white font-bold">
+                class="px-2 pd-1 text-[#DA5512] font-bold">
                 works
             </a>
             <a href="./CV.html"
-                class="px-4 py-1 rounded-full bg-[#DC6A0B] text-white font-bold">
+                class="px-2 pd-1 text-[#083A75] font-bold">
                 resume
             </a>
         </nav>
             
 
-        <div class="md:flex justify-center gap-40">
-            <a href="./metro.html">
-                <div class="place-items-center h-[50vh] p-2 cursor-pointer">
+        <div class="justify-center md:flex md:gap-20">
+
+            <a href="./solly.html">
+                <div class="place-items-center p-2 cursor-pointer">
                 <img src="./assets/folder.png" class="p-1 mx-auto">
-                <div class="font-bold text-4xl text-center">UI/UX</div>
+                <div class="text-[#3a3a3a] font-bold text-4xl text-center">Intern</div>
+                </div>
+            </a>
+
+            <a href="./metro.html">
+                <div class="place-items-center p-2 cursor-pointer">
+                <img src="./assets/folder.png" class="p-1 mx-auto">
+                <div class="text-[#3a3a3a] font-bold text-4xl text-center">Hackathon</div>
                 </div>
             </a>
 
             <a href="./graphic.html">
-                <div class="place-items-center h-[50vh] p-2 cursor-pointer">
+                <div class="place-items-center p-2 cursor-pointer">
                 <img src="./assets/folder.png" class="p-1 mx-auto">
-                <div class="font-bold text-4xl text-center">Graphic</div>
+                <div class="text-[#3a3a3a] font-bold text-4xl text-center">Graphic</div>
                 </div>
             </a>
+
         </div>
 
         <div class="p-4 text-gray-500 font-bold text-center">
