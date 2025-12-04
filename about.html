@@ -37,120 +37,116 @@
   </style>
 </head>
 
-<body>
-    <div class="min-h-screen flex flex-col justify-between">
+<body class="min-h-screen flex flex-col justify-between">
+    
 
-        <!-- Navbar -->
-        <header class="w-full flex items-center justify-between p-4">
-            <!-- 左：Logo / 名字 -->
-            <a href="./index.html" class="text-2xl md:text-4xl font-bold">
-                HSU, CHEN-HSUAN<br>Portfolio
-            </a>
+    <!-- Navbar -->
+    <header class="w-full flex items-center justify-between p-4">
+        <!-- 左：Logo / 名字 -->
+        <a href="./index.html" class="text-2xl md:text-4xl font-bold">
+            HSU, CHEN-HSUAN<br>Portfolio
+        </a>
 
-            <!-- 右：桌機版導覽列 -->
-            <nav class="hidden md:flex justify-center items-center gap-6 text-xl">
-                <a href="./about.html"
-                class="transition duration-300 hover:scale-105 font-bold hover:text-[#DA5512]">
-                about
-                </a>
-
-                <a href="./works_card.html"
-                class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
-                works
-                </a>
-
-                <a href="./resume.html"
-                class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
-                resume
-                </a>
-            </nav>
-
-            <!-- 右：手機版漢堡 -->
-            <button
-            class="md:hidden p-2 rounded text-[#DC6A0B]"
-            aria-label="Toggle navigation"
-            onclick="
-                document.getElementById('mobile-nav').classList.toggle('hidden');
-                this.classList.toggle('text-[#DC6A0B]');
-                this.classList.toggle('text-[#DA5512]');
-            "
-            >
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
-                <circle cx="18" cy="18" r="18" class="fill-current" />
-            </svg>
-            </button>
-
-
-
-        </header>
-
-        <!-- 手機版展開選單 -->
-        <nav id="mobile-nav" class="md:hidden hidden px-4 pb-3 flex flex-col items-end gap-2 text-base">
+        <!-- 右：桌機版導覽列 -->
+        <nav class="hidden md:flex justify-center items-center gap-6 text-xl">
             <a href="./about.html"
-                class="px-2 pd-1 text-[#DA5512] font-bold">
-                about
+            class="transition duration-300 hover:scale-105 font-bold hover:text-[#DA5512]">
+            about
             </a>
+
             <a href="./works_card.html"
-                class="px-2 pd-1 text-[#083A75] font-bold">
-                works
+            class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
+            works
             </a>
+
             <a href="./resume.html"
-                class="px-2 pd-1 text-[#083A75] font-bold">
-                resume
+            class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
+            resume
             </a>
         </nav>
 
-        <div class="hidden md:flex">
-            <img src="./assets/about.png"> 
+        <!-- 右：手機版漢堡 -->
+        <button
+        class="md:hidden p-2 rounded text-[#DC6A0B]"
+        aria-label="Toggle navigation"
+        onclick="
+            document.getElementById('mobile-nav').classList.toggle('hidden');
+            this.classList.toggle('text-[#DC6A0B]');
+            this.classList.toggle('text-[#DA5512]');
+        "
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+            <circle cx="18" cy="18" r="18" class="fill-current" />
+        </svg>
+        </button>
+
+
+
+    </header>
+
+    <!-- 手機版展開選單 -->
+    <nav id="mobile-nav" class="md:hidden hidden px-4 pb-3 flex flex-col items-end gap-2 text-base">
+        <a href="./about.html"
+            class="px-2 pd-1 text-[#DA5512] font-bold">
+            about
+        </a>
+        <a href="./works_card.html"
+            class="px-2 pd-1 text-[#083A75] font-bold">
+            works
+        </a>
+        <a href="./resume.html"
+            class="px-2 pd-1 text-[#083A75] font-bold">
+            resume
+        </a>
+    </nav>
+
+    <div class="flex-1 relative">
+
+        <div class="flex p-2 justify-center">
+            <img src="./assets/me_circle.png" class="max-h-[15vh]">
+            <div class="font-bold text-xl p-4 text-[#3a3a3a]">
+                許宸瑄 Zoe<br>
+                HSU, CHEN-HSUAN<br>
+                2003, Hsinchu
+            </div>
         </div>
 
-        <div class="flex-1 md:hidden relative">
 
-            <div class="flex p-2 justify-center">
-                <img src="./assets/me_circle.png" class="max-h-[15vh]">
-                <div class="font-bold text-xl p-4 text-[#3a3a3a]">
-                    許宸瑄 Zoe<br>
-                    HSU, CHEN-HSUAN<br>
-                    2003, Hsinchu
-                </div>
-            </div>
+        <div class="font-bold text-l p-4 text-[#3a3a3a]">
+            <span class="text-[#DA5512] ">Education</span><br>
+            National Taiwan Normal University<br>
+            B.S. in Computer Science (Expected 2026)<br>
+            <span class="text-[#555555] text-sm">Discovered my interest in product design through cross-disciplinary projects.</span>
+        </div>
 
+        <!--
+        <div class="font-bold text-l p-4 text-[#3a3a3a]">
+            <span class="text-[#DA5512]">Experience</span><br>
+            Lorem ipsum lorem ipsum lorem ipsum<br>
+            Lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum
+        </div>
+        -->
 
-            <div class="font-bold text-l p-4 text-[#3a3a3a]">
-                <span class="text-[#DA5512] ">Education</span><br>
-                National Taiwan Normal University<br>
-                B.S. in Computer Science<br>
-                <span class="text-[#555555] text-sm">Discovered my interest in product design through cross-disciplinary projects.</span>
-            </div>
-
-            <!--
-            <div class="font-bold text-l p-4 text-[#3a3a3a]">
-                <span class="text-[#DA5512]">Experience</span><br>
-                Lorem ipsum lorem ipsum lorem ipsum<br>
-                Lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum
-            </div>
-            -->
-
-            <div class="font-bold text-l p-4 text-[#3a3a3a]">
-                <span class="text-[#DA5512]">What people say about me!</span><br>
-                Responisble<br>
-                <span class="text-[#555555] text-sm">I follow through and deliver what I commit to.</span><br>
-                Logical thinking<br>
-                <span class="text-[#555555] text-sm">I approach problems with structure and clarity.</span><br>
-                Straight Forward<br>
-                <span class="text-[#555555] text-sm">I communicate honestly and directly, making collaboration smooth.</span>
-            </div>
-
-            
-
-            <!-- <img src="./assets/me.png" class="absolute bottom-3 right-3 h-[40vh]"> -->
-            
-            
+        <div class="font-bold text-l p-4 text-[#3a3a3a]">
+            <span class="text-[#DA5512]">What people say about me!</span><br>
+            Responisble<br>
+            <span class="text-[#555555] text-sm">I follow through and deliver what I commit to.</span><br>
+            Logical thinking<br>
+            <span class="text-[#555555] text-sm">I approach problems with structure and clarity.</span><br>
+            Straight Forward<br>
+            <span class="text-[#555555] text-sm">I communicate honestly and directly, making collaboration smooth.</span>
         </div>
 
         
-        <!--FOOTER START-->
-        <div class="p-4 text-gray-500 font-bold text-center text-sm md:text-l">
+
+        <!-- <img src="./assets/me.png" class="absolute bottom-3 right-3 h-[40vh]"> -->
+        
+        
+    </div>
+
+    
+    <!--FOOTER START-->
+    <div class="p-4 text-gray-500 font-bold text-center text-sm md:text-l">
         <div>
             <a href="https://www.linkedin.com/in/zoe2746/" 
             class="underline hover:text-[#DA5512]" 
@@ -164,10 +160,8 @@
             class="underline hover:text-[#DA5512]">zoe2746@gmail.com</a>
 
         </div>
-
-        </div>
-        <!--FOOTER END-->
-
     </div>
+    <!--FOOTER END-->
+
 </body>
 </html>

@@ -37,18 +37,80 @@
   
 </head>
 
-<body>
+<body class="min-h-screen flex flex-col">
 
     <!-- <a href="index.html">Home</a> <-->
 
-    <div>
+    <main class="flex-1">
       <div onclick="history.back()" 
-          class="fixed top-3 left-3 text-white font-bold text-xl drop-shadow-lg px-3 py-1 cursor-pointer hover:text-[#DA5512]">
+          class="fixed top-3 left-3 text-white font-bold text-xl drop-shadow-lg z-50 px-3 py-1 cursor-pointer hover:text-[#DA5512]">
           < Back
       </div>
 
-        <img src="./assets/solly/SollyPortfolio.png">
-    </div>
+      <div class="relative h-[20vh] bg-cover bg-center"
+        style="background-image: url('./assets/solly/SollyPortfolio.png')">
+      </div>
+
+      <div>
+        <div class="p-4">
+          <h1 class="font-bold text-4xl text-[#3a3a3a] pl-4">
+            Summer Design Internship at AI Solly
+          </h1>
+        </div>
+
+        <div class="px-5 md:px-20 flex flex-col">
+          <div class="inline-block font-bold text-white px-6 py-2 m-2 my-4 bg-[#DA5512] rounded-3xl w-fit">
+            Product Introduction
+          </div>
+          <div class="text-[#3a3a3a] px-8">
+            AI SOLLY is a virtual social companion designed for students with special needs. 
+            It provides a variety of real-life school scenarios in which Solly, a virtual classmate, interacts with the child. 
+            The system uses AI to generate personalized responses that guide students through practicing social communication. 
+            Through repeated practice, learners gradually build positive communication and social-interaction skills.
+            <br><br>
+            Beyond being a helpful assistant during class, AI SOLLY also integrates teaching management tools, 
+            SEL (Social Emotional Learning) curriculum generation, and student learning-progress tracking, 
+            making it a comprehensive platform for educators.
+          </div>
+
+          <div class="inline-block font-bold text-white px-6 py-2 mt-6 m-2 my-4 bg-[#DA5512] rounded-3xl w-fit">
+            My Role
+          </div>
+          <div class="text-[#3a3a3a] px-8">
+            As a design intern, I collaborated with the design team to redesign the system’s UX/UI. 
+            <br>This portfolio showcases primarily my contributions; the complete project can be found in the links below.
+            <br>
+            <a href="https://www.behance.net/gallery/234983945/AI-SOLLY-User-Experience%28UX%29-Research" 
+            class="underline hover:text-[#083A75] hover:font-bold" 
+            target="_blank">UX Research (Behance Link)</a>
+            <br>
+            <a href="https://www.behance.net/gallery/235749395/AI-SOLLY-Education-Platform-Dashboard" 
+            class="underline hover:text-[#083A75] hover:font-bold" 
+            target="_blank">UI Design (Behance Link)</a>
+
+          </div>
+
+          <div class="inline-block font-bold text-white px-6 py-2 mt-6 mx-2 my-4 bg-[#DA5512] rounded-3xl w-fit">
+            Design Process
+          </div>
+
+          <div class="inline-block font-bold text-white px-6 py-2 mt-6 mx-2 my-4 bg-[#DA5512] rounded-3xl w-fit">
+            Design Process
+          </div>
+
+          
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+      
+    </main>
 
     <!--FOOTER START-->
     <div class="p-4 text-gray-500 font-bold text-center text-sm md:text-l">
