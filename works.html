@@ -1,150 +1,307 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chen-Hsuan Hsu</title>
-  <link rel="icon" type="image/png" href="./assets/icon.png" />
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Works｜Chen-Hsuan Hsu</title>
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <style>
-    /* 400 Regular */
-    @font-face {
-      font-family: 'SourceCodePro';
-      src: url('./assets/fonts/SourceCodePro-Regular.otf') format('opentype');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
+    <style>
+        @font-face {
+        font-family: 'SourceCodePro';
+        src: url('./assets/fonts/SourceCodePro-Regular.otf') format('opentype');
+        font-weight: 400;
+        font-display: swap;
+        }
+        @font-face {
+        font-family: 'SourceCodePro';
+        src: url('./assets/fonts/SourceCodePro-Bold.otf') format('opentype');
+        font-weight: 700;
+        font-display: swap;
+        }
 
-    /* 700 Bold */
-    @font-face {
-      font-family: 'SourceCodePro';
-      src: url('./assets/fonts/SourceCodePro-Bold.otf') format('opentype');
-      font-weight: 700;
-      font-style: bold;
-      font-display: swap;
-    }
-
-    /* 全站預設使用 */
-    body {
+        body {
         font-family: 'SourceCodePro', monospace;
         background: #FCD9A0;
         color: #083A75;
-        min-height: 100vh;
         margin: 0;
-    }
-  </style>
+        min-height: 100vh;
+        }
+
+        /* Folder animation */
+        .folder-item {
+        opacity: 0;
+        transition: all 0.4s ease;
+        }
+        .folder.open .folder-item {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+        }
+        
+        .folder {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        margin-top: 30px;
+        text-align: center;
+        }
+
+        .folder-icon {
+        width: 120px;
+        display: block;
+        z-index: 2;
+        position: relative;
+        }
+
+        .folder-item {
+        position: absolute;
+        opacity: 0;
+        transition: all 0.5s ease;
+        }
+
+        /* 初始位置（隨便散開一點） */
+        .poster  { top: -30px; left: 20px;  transform: rotate(-8deg) scale(0.9); }
+        .merch   { top: -20px; left: 60px;  transform: rotate(5deg) scale(0.9); }
+        .social  { top: -10px; left: 40px;  transform: rotate(12deg) scale(0.9); }
+
+        /* Hover 時歸位並顯示 */
+        .folder:hover .folder-item {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+        }
+
+        .folder:hover .poster  { top: -100px; left: -40px; }
+        .folder:hover .merch   { top: -120px; left:  60px; }
+        .folder:hover .social  { top: -100px; left: 30px; }
+    </style>
 </head>
 
 <body>
 
-    <div class="min-h-screen min-w-screen flex flex-col justify-between"> 
+    <div class="min-h-screen flex flex-col ">
 
-        <!-- Navbar -->
+        <!-- NAVBAR -->
         <header class="w-full flex items-center justify-between p-4">
-            <a href="./index.html" class="text-2xl md:text-4xl font-bold p-4">
-                HSU, CHEN-HSUAN<br>Portfolio
+            <a href="./index.html" class="text-2xl md:text-4xl font-bold">
+            HSU, CHEN-HSUAN<br>Portfolio
             </a>
 
-            <nav class="hidden md:flex justify-center items-center gap-6 text-xl">
-                <a href="./about.html"
-                class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
-                about
-                </a>
-
-                <a href="./works_card.html"
-                class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
-                works
-                </a>
-
-                <a href="./resume.html"
-                class="transition duration-300 hover:scale-105 hover:font-bold hover:text-[#DA5512]">
-                resume
-                </a>
+            <nav class="hidden md:flex gap-6 text-xl">
+            <a href="./about.html" class="hover:text-[#DA5512] transition">about</a>
+            <a href="./works_card.html" class="font-bold text-[#DA5512]">works</a>
+            <a href="./resume.html" class="hover:text-[#DA5512] transition">resume</a>
             </nav>
-
-            <!-- 右：手機版漢堡 -->
-            <button
-            class="md:hidden p-2 rounded text-[#DC6A0B]"
-            aria-label="Toggle navigation"
-            onclick="
-                document.getElementById('mobile-nav').classList.toggle('hidden');
-                this.classList.toggle('text-[#DC6A0B]');
-                this.classList.toggle('text-[#DA5512]');
-            "
-            >
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
-                <circle cx="18" cy="18" r="18" class="fill-current" />
-            </svg>
-            </button>
-
-
-
         </header>
 
-        <!-- 手機版展開選單 -->
-        <nav id="mobile-nav" class="md:hidden hidden px-4 flex flex-col items-end gap-2 text-base">
-            <a href="./about.html"
-                class="px-2 pd-1 text-[#083A75] font-bold">
-                about
-            </a>
-            <a href="./works_card.html"
-                class="px-2 pd-1 text-[#DA5512] font-bold">
-                works
-            </a>
-            <a href="./resume.html"
-                class="px-2 pd-1 text-[#083A75] font-bold">
-                resume
-            </a>
-        </nav>
-            
-
-        <div class="scale-75 flex flex-col gap-10 justify-center md:flex-row md:gap-20 md:scale-100">
-
-            <a href="./solly.html">
-                <div class="place-items-center p-2 cursor-pointer">
-                <img src="./assets/folder.png" class="p-1 mx-auto">
-                <div class="text-[#3a3a3a] font-bold text-4xl text-center">Intern</div>
+        <!-- INTRO -->
+        <section>
+            <div class="flex flex-col items-center">
+                <div class="flex md:flex px-8 p-4 lg:px-44 items-center">
+                    <img src="./assets/me_circle.png" class="max-h-20">
+                    <div class="font-bold text-xl px-4 text-[#3a3a3a]">
+                        許宸瑄<br>
+                        HSU, CHEN-HSUAN<br>
+                        Product Designer
+                    </div>
                 </div>
-            </a>
 
-            <a href="./metro.html">
-                <div class="place-items-center p-2 cursor-pointer">
-                <img src="./assets/folder.png" class="p-1 mx-auto">
-                <div class="text-[#3a3a3a] font-bold text-4xl text-center">Hackathon</div>
+                <div class=" md:flex-1 text-[#3a3a3a] font-bold px-8 lg:px-44 items-center text-center">
+                    I am a <span class="text-black ">product designer</span> who sees design as <span class="text-[#000000] underline underline-offset-2 decoration-[#e4961c]">a way to solve problems</span>,<br> 
+                    obsessed with making products both understandable and beautiful.<br>
+                    <!--With a background in Computer Science, I bring clear structure and logical thinking into my design process— 
+                    <span class="text-[#000000] underline underline-offset-2 decoration-[#e4961c]">communicating clearly</span> and 
+                    <span class="text-[#000000] underline underline-offset-2 decoration-[#e4961c]">shaping clear, simple solutions</span>.-->
                 </div>
-            </a>
+            </div>
+        </section>
 
-            <a href="./graphic.html">
-                <div class="place-items-center p-2 cursor-pointer">
-                <img src="./assets/folder.png" class="p-1 mx-auto">
-                <div class="text-[#3a3a3a] font-bold text-4xl text-center">Graphic</div>
-                </div>
-            </a>
-
+        <!-- VIEW TOGGLE -->
+        <div class="flex justify-end px-8 lg:px-44 mt-8">
+            <div class="inline-flex rounded-xl border border-[#083A75]/20 overflow-hidden">
+            <button id="cardBtn"
+                class="px-4 py-2 text-sm font-bold bg-[#083A75] text-white">
+                Card View
+            </button>
+            <button id="folderBtn"
+                class="px-4 py-2 text-sm font-bold hover:bg-[#083A75]/10">
+                Folder View
+            </button>
+            </div>
         </div>
 
-    <!--FOOTER START-->
-    <div class="p-4 text-gray-500 font-bold text-center text-sm md:text-l">
-      <div>
-        <a href="https://www.linkedin.com/in/zoe2746/" 
-          class="underline hover:text-[#DA5512]" 
-          target="_blank">LinkedIn</a>
-        |
-        <a href="https://www.behance.net/zoe2746" 
-          class="underline hover:text-[#DA5512]" 
-          target="_blank">Behance</a>
-        |
-        <a href="mailto:zoe2746@gmail.com" 
-          class="underline hover:text-[#DA5512]">zoe2746@gmail.com</a>
+        <!-- CARD VIEW -->
+        <section id="cardView"
+            class="p-6 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-10 lg:px-40 mt-6">
 
-      </div>
+            <!-- SOLLY -->
+            <a href="./solly.html" class="block">
+                <div class="relative cursor-pointer rounded-3xl h-[30vh] bg-cover bg-center hover:drop-shadow-2xl hover:scale-105 transition duration-300"
+                    style="background-image: url('./assets/solly/SollyPortfolio.png')">
+                    
+                    <div class="absolute top-3 right-3 bg-[#DA5512]/90 text-white font-semibold px-3 py-1 rounded-full">
+                        UI/UX
+                    </div>
+
+
+                    <div class="absolute bottom-0 w-full bg-black/40 rounded-b-3xl backdrop-blur-sm py-3 px-4">
+                        <div class="text-white font-bold text-xl">
+                            Internship at AI SOLLY
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+
+            <!-- METRO -->
+            <a href="./metro.html" class="block">
+                <div class="relative cursor-pointer rounded-3xl h-[30vh] bg-cover bg-center hover:drop-shadow-2xl hover:scale-105 transition duration-300"
+                    style="background-image: url('./assets/metro/final-04.jpg')">
+                    
+                    <div class="absolute top-3 right-3 flex gap-2">
+
+                        <div class="bg-[#e4961c]/90 text-white font-semibold px-3 py-1 rounded-full">
+                            1st place
+                        </div>
+
+                        <div class="bg-[#DA5512]/90 text-white font-semibold px-3 py-1 rounded-full">
+                            UI/UX
+                        </div>
+
+                    </div>
+                    
+                    <div class="absolute bottom-0 w-full bg-black/40 rounded-b-3xl backdrop-blur-sm py-3 px-4">
+                        <div class="text-white font-bold text-xl">
+                            Taipei Metro Hackathon
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+
+            <!-- GRAPHIC -->
+            <a href="./camp.html" class="block">
+                <div class="relative cursor-pointer rounded-3xl h-[30vh] bg-cover bg-center hover:drop-shadow-2xl hover:scale-105 transition duration-300"
+                    style="background-image: url('./assets/csie_camp/final-13.jpg')">
+                    
+                    <div class="absolute top-3 right-3 bg-[#083A75]/80 text-white font-semibold px-3 py-1 rounded-full">
+                        Graphic
+                    </div>
+
+
+                    <div class="absolute bottom-0 w-full bg-black/40 rounded-b-3xl backdrop-blur-sm py-3 px-4">
+                        <div class="text-white font-bold text-xl">
+                            NTNU CSIP Camp
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+
+            <!-- ROME -->
+            <a href="./rome.html" class="block">
+                <div class="relative cursor-pointer rounded-3xl h-[30vh] bg-cover bg-center hover:drop-shadow-2xl hover:scale-105 transition duration-300"
+                    style="background-image: url('./assets/rome_gelato.png')">
+                    
+                    <div class="absolute top-3 right-3 bg-[#083A75]/80 text-white font-semibold px-3 py-1 rounded-full">
+                        Graphic
+                    </div>
+
+
+                    <div class="absolute bottom-0 w-full bg-black/40 rounded-b-3xl backdrop-blur-sm py-3 px-4">
+                        <div class="text-white font-bold text-xl">
+                            Exchange Program at Italy
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+        </section>
+
+    <!-- FOLDER VIEW -->
+    <section id="folderView"
+        class="hidden p-10 flex flex-wrap justify-center gap-20 lg:px-40">
+
+        <!-- Folder Item -->
+        <div class="folder relative text-center cursor-pointer"
+        data-link="./graphic.html">
+
+            <div class="folder">
+                <img src="./assets/folder.png" class="folder-icon" alt="Folder">
+                
+                <img src="./assets/c.png" class="folder-item social" alt="Social Media">
+                <img src="./assets/a.png" class="folder-item poster" alt="Poster">
+                <img src="./assets/b.png"  class="folder-item merch" alt="Merch">
+
+            </div>
+
+            <div >
+                <div class="text-xl font-bold text-[#3a3a3a]">Graphic Design</div>
+                <div class="text-sm opacity-70">Posters · Visual · Experiments</div>
+            </div>
+        </div>
+
+        <div class="folder relative text-center cursor-pointer"
+        data-link="./uiux.html">
+
+            <div class="folder">
+                <img src="./assets/folder.png" class="folder-icon" alt="Folder">
+                
+                <img src="./assets/c.png" class="folder-item social" alt="Social Media">
+                <img src="./assets/a.png" class="folder-item poster" alt="Poster">
+                <img src="./assets/b.png"  class="folder-item merch" alt="Merch">
+
+            </div>
+
+            <div >
+                <div class="text-xl font-bold text-[#3a3a3a]">UI/UX</div>
+                <div class="text-sm opacity-70">Hackathon · Internship</div>
+            </div>
+        </div>
+
+        <!-- 複製一份可做 Solly / Metro / Rome -->
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="p-4 text-center text-sm text-gray-500 font-bold">
+        <a href="https://www.linkedin.com/in/zoe2746/" class="underline">LinkedIn</a> |
+        <a href="https://www.behance.net/zoe2746" class="underline">Behance</a> |
+        <a href="mailto:zoe2746@gmail.com" class="underline">zoe2746@gmail.com</a>
+    </footer>
 
     </div>
-    <!--FOOTER END-->
 
-    </div>
+    <!-- SCRIPT -->
+    <script>
+    const cardBtn = document.getElementById('cardBtn');
+    const folderBtn = document.getElementById('folderBtn');
+    const cardView = document.getElementById('cardView');
+    const folderView = document.getElementById('folderView');
+
+    cardBtn.onclick = () => {
+        cardView.classList.remove('hidden');
+        folderView.classList.add('hidden');
+        cardBtn.classList.add('bg-[#083A75]', 'text-white');
+        folderBtn.classList.remove('bg-[#083A75]', 'text-white');
+    };
+
+    folderBtn.onclick = () => {
+        folderView.classList.remove('hidden');
+        cardView.classList.add('hidden');
+        folderBtn.classList.add('bg-[#083A75]', 'text-white');
+        cardBtn.classList.remove('bg-[#083A75]', 'text-white');
+    };
+
+    document.querySelectorAll('.folder').forEach(folder => {
+        folder.addEventListener('click', () => {
+        if (folder.classList.contains('open')) {
+            window.location.href = folder.dataset.link;
+        } else {
+            folder.classList.add('open');
+        }
+        });
+    });
+    </script>
 
 </body>
 </html>

@@ -11,7 +11,7 @@
 
     @font-face {
       font-family: 'SourceCodePro';
-      src: url('./assets/fonts/SourceCodePro-Regular.otf') format('opentype');
+      src: url('./assets/fonts/SourceCodePro-Medium.otf') format('opentype');
       font-weight: 400;
       font-style: normal;
       font-display: swap;
@@ -42,23 +42,27 @@
     <!-- <a href="index.html">Home</a> <-->
 
     <main class="flex-1">
-      <div onclick="history.back()" 
+      <a href="./works_card.html"
           class="fixed top-3 left-3 text-white font-bold text-xl drop-shadow-lg z-50 px-3 py-1 cursor-pointer hover:text-[#DA5512]">
           < Back
-      </div>
+    </a>
 
-      <div class="relative h-[20vh] bg-cover bg-center"
+      <div class="md:hidden relative h-[30vh] bg-cover bg-center"
         style="background-image: url('./assets/solly/SollyPortfolio.png')">
       </div>
 
+      <div class="md:block hidden relative h-[30vh] bg-cover bg-center"
+        style="background-image: url('./assets/solly/solly_banner.png')">
+      </div>
+
       <div>
-        <div class="p-4">
+        <div class="md:px-24 lg:px-48 py-12 px-4">
           <h1 class="font-bold text-4xl text-[#3a3a3a] pl-4">
             Summer Design Internship at AI Solly
           </h1>
         </div>
 
-        <div class="px-5 md:px-20 flex flex-col">
+        <div class="px-5 md:px-24 lg:px-48 flex flex-col">
           <div class="inline-block font-bold text-white px-6 py-2 m-2 my-4 bg-[#DA5512] rounded-3xl w-fit">
             Product Introduction
           </div>
@@ -95,21 +99,15 @@
           </div>
 
           <div class="inline-block font-bold text-white px-6 py-2 mt-6 mx-2 my-4 bg-[#DA5512] rounded-3xl w-fit">
-            Design Process
+            UX Improvement
           </div>
 
-          
-
-
+      
         </div>
 
 
       </div>
-
-
-
-
-      
+ 
     </main>
 
     <!--FOOTER START-->
@@ -125,7 +123,6 @@
         |
         <a href="mailto:zoe2746@gmail.com" 
           class="underline hover:text-[#DA5512]">zoe2746@gmail.com</a>
-
       </div>
 
     </div>
@@ -133,3 +130,4 @@
 
 </body>
 </html>
+  
