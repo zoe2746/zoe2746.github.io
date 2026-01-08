@@ -84,15 +84,61 @@
         <!-- NAVBAR -->
         <header class="w-full flex items-center justify-between p-4">
             <a href="./index.html" class="text-2xl md:text-4xl font-bold">
-            HSU, CHEN-HSUAN<br>Portfolio
+                HSU, CHEN-HSUAN<br>Portfolio
             </a>
 
-            <nav class="hidden md:flex gap-6 text-xl">
-            <a href="./about.html" class="hover:text-[#DA5512] transition">about</a>
-            <a href="./works_card.html" class="font-bold text-[#DA5512]">works</a>
-            <a href="./resume.html" class="hover:text-[#DA5512] transition">resume</a>
+            <nav class="hidden md:flex justify-center items-center gap-6 text-xl">
+                <a href="./about.html"
+                class="transition duration-300 hover:scale-105 hover:font-bold">
+                about
+                </a>
+
+                <a href="./works.html"
+                class="transition duration-300 font-bold :scale-105 hover:text-[#DA5512] text-[#DA5512]">
+                works
+                </a>
+
+                <a href="./resume.html"
+                class="transition duration-300 hover:scale-105 hover:font-bold ">
+                resume
+                </a>
             </nav>
+
+            <!-- 右：手機版漢堡 -->
+            <button
+            class="md:hidden p-2 rounded text-[#DC6A0B]"
+            aria-label="Toggle navigation"
+            onclick="
+                document.getElementById('mobile-nav').classList.toggle('hidden');
+                this.classList.toggle('text-[#DC6A0B]');
+                this.classList.toggle('text-[#DA5512]');
+            "
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <circle cx="18" cy="18" r="18" class="fill-current" />
+            </svg>
+            </button>
+
+
+
         </header>
+
+        <!-- 手機版展開選單 -->
+        <nav id="mobile-nav" class="md:hidden hidden px-4 flex flex-col items-end gap-2 text-base">
+            <a href="./about.html"
+                class="px-2 pd-1 text-[#083A75] font-bold">
+                about
+            </a>
+            <a href="./works_card.html"
+                class="px-2 pd-1 text-[#DA5512] font-bold">
+                works
+            </a>
+
+            <a href="./resume.html"
+                class="px-2 pd-1 text-[#083A75] font-bold">
+                resume
+            </a>
+        </nav>
 
         <!-- INTRO -->
         <section>
@@ -117,14 +163,16 @@
         </section>
 
         <!-- VIEW TOGGLE -->
-        <div class="flex justify-end px-8 lg:px-44 mt-8">
+        <div class="flex justify-center px-8 lg:px-44 mt-8">
             <div class="inline-flex rounded-xl border border-[#083A75]/20 overflow-hidden">
             <button id="cardBtn"
-                class="px-4 py-2 text-sm font-bold bg-[#083A75] text-white">
+                class="px-4 py-2 text-sm font-bold bg-[#083A75] text-white flex justify-center items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rectangle-horizontal-icon lucide-rectangle-horizontal"><rect width="20" height="12" x="2" y="6" rx="2"/></svg>
                 Card View
             </button>
             <button id="folderBtn"
-                class="px-4 py-2 text-sm font-bold hover:bg-[#083A75]/10">
+                class="px-4 py-2 text-sm font-bold flex justify-center items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-icon lucide-folder"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
                 Folder View
             </button>
             </div>
@@ -220,7 +268,7 @@
 
     <!-- FOLDER VIEW -->
     <section id="folderView"
-        class="hidden p-10 flex flex-wrap justify-center gap-20 lg:px-40">
+        class="hidden p-10 flex flex-1 flex-col items-center justify-center gap-20 lg:px-40 md:flex-row">
 
         <!-- Folder Item -->
         <div class="folder relative text-center cursor-pointer"
@@ -273,34 +321,24 @@
 
     <!-- SCRIPT -->
     <script>
-    const cardBtn = document.getElementById('cardBtn');
-    const folderBtn = document.getElementById('folderBtn');
-    const cardView = document.getElementById('cardView');
-    const folderView = document.getElementById('folderView');
+        const cardBtn = document.getElementById('cardBtn');
+        const folderBtn = document.getElementById('folderBtn');
+        const cardView = document.getElementById('cardView');
+        const folderView = document.getElementById('folderView');
 
-    cardBtn.onclick = () => {
-        cardView.classList.remove('hidden');
-        folderView.classList.add('hidden');
-        cardBtn.classList.add('bg-[#083A75]', 'text-white');
-        folderBtn.classList.remove('bg-[#083A75]', 'text-white');
-    };
+        cardBtn.onclick = () => {
+            cardView.classList.remove('hidden');
+            folderView.classList.add('hidden');
+            cardBtn.classList.add('bg-[#083A75]', 'text-white');
+            folderBtn.classList.remove('bg-[#083A75]', 'text-white');
+        };
 
-    folderBtn.onclick = () => {
-        folderView.classList.remove('hidden');
-        cardView.classList.add('hidden');
-        folderBtn.classList.add('bg-[#083A75]', 'text-white');
-        cardBtn.classList.remove('bg-[#083A75]', 'text-white');
-    };
-
-    document.querySelectorAll('.folder').forEach(folder => {
-        folder.addEventListener('click', () => {
-        if (folder.classList.contains('open')) {
-            window.location.href = folder.dataset.link;
-        } else {
-            folder.classList.add('open');
-        }
-        });
-    });
+        folderBtn.onclick = () => {
+            folderView.classList.remove('hidden');
+            cardView.classList.add('hidden');
+            folderBtn.classList.add('bg-[#083A75]', 'text-white');
+            cardBtn.classList.remove('bg-[#083A75]', 'text-white');
+        };
     </script>
 
 </body>
