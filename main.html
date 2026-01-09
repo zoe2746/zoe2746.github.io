@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Works｜Chen-Hsuan Hsu</title>
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @font-face {
+        font-family: 'SourceCodePro';
+        src: url('./assets/fonts/SourceCodePro-Regular.otf') format('opentype');
+        font-weight: 400;
+        font-display: swap;
+        }
+        @font-face {
+        font-family: 'SourceCodePro';
+        src: url('./assets/fonts/SourceCodePro-Bold.otf') format('opentype');
+        font-weight: 700;
+        font-display: swap;
+        }
+
+        body {
+        font-family: 'SourceCodePro', monospace;
+        background: #FCD9A0;
+        color: #083A75;
+        margin: 0;
+        min-height: 100vh;
+        }
+
+
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col ">
+
+
+    <!-- NAVBAR -->
+    <header class="w-full flex items-center justify-between p-4">
+        <a href="./index.html" class="text-2xl md:text-4xl font-bold">
+            HSU, CHEN-HSUAN<br>Portfolio
+        </a>
+
+        <nav class="hidden md:flex justify-center items-center gap-6 text-xl">
+            <a href="./about.html"
+            class="transition duration-300 hover:scale-105 hover:font-bold">
+            about
+            </a>
+
+            <a href="./works.html"
+            class="transition duration-300 font-bold text-[#DA5512]">
+            works
+            </a>
+
+            <a href="./resume.html"
+            class="transition duration-300 hover:scale-105 hover:font-bold ">
+            resume
+            </a>
+        </nav>
+
+        <!-- 右：手機版漢堡 -->
+        <button
+        class="md:hidden p-2 rounded text-[#DC6A0B]"
+        aria-label="Toggle navigation"
+        onclick="
+            document.getElementById('mobile-nav').classList.toggle('hidden');
+            this.classList.toggle('text-[#DC6A0B]');
+            this.classList.toggle('text-[#DA5512]');
+        "
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+            <circle cx="18" cy="18" r="18" class="fill-current" />
+        </svg>
+        </button>
+
+    </header>
+
+    <!-- 手機版展開選單 -->
+    <nav id="mobile-nav" class="md:hidden hidden px-4 flex flex-col items-end gap-2 text-base">
+        <a href="./about.html"
+            class="px-2 pd-1 text-[#083A75] font-bold">
+            about
+        </a>
+        <a href="./works.html"
+            class="px-2 pd-1 text-[#DA5512] font-bold">
+            works
+        </a>
+
+        <a href="./resume.html"
+            class="px-2 pd-1 text-[#083A75] font-bold">
+            resume
+        </a>
+    </nav>
+
+    <!-- INTRO -->
+    <section>
+        <div class="flex flex-col items-center">
+            <div class="flex md:flex px-8 p-4 lg:px-44 items-center">
+                <img src="./assets/me_circle.png" class="max-h-20">
+                <div class="font-bold text-xl px-4 text-[#3a3a3a]">
+                    許宸瑄<br>
+                    HSU, CHEN-HSUAN<br>
+                    Product Designer
+                </div>
+            </div>
+
+            <div class=" md:flex-1 text-[#3a3a3a] font-bold px-8 lg:px-44 items-center text-center">
+                I am a <span class="text-black ">product designer</span> who sees design as <span class="text-[#000000] underline underline-offset-2 decoration-[#e4961c]">a way to solve problems</span>,<br> 
+                obsessed with making products both understandable and beautiful.<br>
+                <!--With a background in Computer Science, I bring clear structure and logical thinking into my design process— 
+                <span class="text-[#000000] underline underline-offset-2 decoration-[#e4961c]">communicating clearly</span> and 
+                <span class="text-[#000000] underline underline-offset-2 decoration-[#e4961c]">shaping clear, simple solutions</span>.-->
+            </div>
+        </div>
+    </section>
+
+    <!--WORKS-->
+        <section id="cardView"
+            class="p-6 grid grid-cols-1 gap-10 lg:px-40 mt-6">
+
+            <!-- SOLLY -->
+            <div class="relative rounded-3xl md:h-[60vh] border-2 border-[#bba278]
+                bg-cover bg-center overflow-hidden px-10 py-8 hover:bg-white"
+                style="background-image: url('./assets/cards/solly_bg.png')">
+
+                <!-- tag -->
+                <div class="absolute top-3 right-3 flex gap-2">
+
+                    <div class="bg-[#DA5512]/90 text-white font-semibold px-3 py-1 rounded-full">
+                        UI/UX
+                    </div>
+
+                </div>
+
+                <!-- content -->
+                <div class="grid grid-cols-1 md:grid-cols-5 h-full gap-8">
+
+                    <!-- LEFT: text -->
+                    <div class="md:col-span-2 flex flex-col justify-center text-[#3a3a3a]">
+                        <div class="uppercase tracking-widest text-sm opacity-70 mb-3">
+                            AI SOLLY
+                        </div>
+
+                        <h2 class="font-bold text-3xl leading-tight mb-4">
+                            Summer Design Internship
+                        </h2>
+
+                        <p class="text-base leading-relaxed mb-6">
+                            Redesigned an AI-powered education platform to better support
+                            teachers and students through clearer workflows and role-based interfaces.
+                        </p>
+
+                        <a href="./solly.html"
+                            class="inline-flex items-center gap-2 w-fit
+                                    font-bold text-[#083A75] hover:underline">
+                            View case study →
+                        </a>
+                    </div>
+
+                    <!-- RIGHT: image -->
+                    <div class="md:col-span-3 flex items-center justify-center">
+                        <img src="./assets/cards/solly_product.png" class="max-h-[85%] object-contain">
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- METRO -->
+            <div class="relative rounded-3xl md:h-[60vh] border-2 border-[#bba278]
+                bg-[#cbcbcb] bg-cover bg-center bg-opacity-70 hover:bg-opacity-100 overflow-hidden px-10 py-8">
+
+                <!-- tag -->
+                <div class="absolute top-3 right-3 flex gap-2">
+
+                    <div class="bg-[#e4961c]/90 text-white font-semibold px-3 py-1 rounded-full">
+                            1st place
+                    </div>
+
+                    <div class="bg-[#DA5512]/90 text-white font-semibold px-3 py-1 rounded-full">
+                        UI/UX
+                    </div>
+
+                </div>
+
+                <!-- content -->
+                <div class="grid grid-cols-1 md:grid-cols-5 h-full gap-8">
+
+                    <!-- LEFT: text -->
+                    <div class="md:col-span-2 flex flex-col justify-center text-[#3a3a3a]">
+
+                        <div class="uppercase tracking-widest text-sm opacity-70 mb-3">
+                            Taipei Metro
+                        </div>
+
+                        <h2 class="font-bold text-3xl leading-tight mb-4">
+                            2024 Hackathon
+                        </h2>
+
+                        <p class="text-base leading-relaxed mb-6">
+                            Redesigned the Taipei Metro app experience and introduced three new, user-focused features.
+                        </p>
+
+                        <a href="./metro.html"
+                            class="inline-flex items-center gap-2 w-fit
+                                    font-bold text-[#083A75] hover:underline">
+                            View case study →
+                        </a>
+                    </div>
+
+                    <!-- RIGHT: image -->
+                    <div class="md:col-span-3 flex items-end justify-center">
+                        <img
+                            src="./assets/cards/metro.png"
+                            class="max-h-[360px] object-contain drop-shadow-2xl"
+                        />
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- GRAPHIC -->
+            <div class="relative rounded-3xl md:h-[60vh] border-2 border-[#bba278]
+                        overflow-hidden px-10 py-8 
+                        bg-cover bg-center"
+                style="background-image: url('./assets/cards/camp_bg.png')">
+
+                <!-- overlay -->
+                <div class="absolute inset-0 bg-[#FCD9A0] bg-opacity-30 hover:bg-opacity-0"></div>
+
+                <div class="absolute top-3 right-3 bg-[#083A75]/80 text-white font-semibold px-3 py-1 rounded-full">
+                    Graphic
+                </div>
+
+                <!-- content（一定要有 relative） -->
+                <div class="relative h-full">
+
+                    <!-- content -->
+                    <div class="grid grid-cols-1 md:grid-cols-5 h-full gap-8">
+
+                        <!-- LEFT: text -->
+                        <div class="md:col-span-2 flex flex-col justify-center text-[#3a3a3a]">
+
+                            <div class="uppercase tracking-widest text-sm opacity-70 mb-3">
+                                National Taiwan Normal University
+                            </div>
+
+                            <h2 class="font-bold text-3xl leading-tight mb-4">
+                                NTNU CSIE CAMP '23
+                            </h2>
+
+                            <p class="text-base leading-relaxed mb-6">
+                                Designed the visual identity and learning materials for a computer science camp, creating a cohesive and engaging experience for students.
+                            </p>
+
+                            <a href="./camp.html"
+                                class="inline-flex items-center gap-2 w-fit
+                                        font-bold text-[#083A75] hover:underline">
+                                View case study →
+                            </a>
+                        </div>
+
+                        <!-- RIGHT: image -->
+                        <div class="md:col-span-3 flex items-end justify-center">
+                            <div class="h-full max-h-[420px] flex items-end justify-center">
+                                <img
+                                src="./assets/cards/camp_photo.png"
+                                class="h-full object-contain drop-shadow-2xl"
+                                />
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+    <!-- FOOTER -->
+    <footer class="p-4 text-center text-sm text-gray-500 font-bold">
+        <a href="https://www.linkedin.com/in/zoe2746/" class="underline">LinkedIn</a> |
+        <a href="https://www.behance.net/zoe2746" class="underline">Behance</a> |
+        <a href="mailto:zoe2746@gmail.com" class="underline">zoe2746@gmail.com</a>
+    </footer>
+
+</body>
+</html>
