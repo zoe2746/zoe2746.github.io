@@ -7,6 +7,8 @@
   <link rel="icon" type="image/png" href="./assets/icon.png" />
   <script src="https://cdn.tailwindcss.com"></script>
 
+    <meta name="view-transition" content="same-origin">
+
   <style>
     /* 400 Regular */
     @font-face {
@@ -34,6 +36,29 @@
       color: #083A75;
       margin: 0;
     }
+    
+
+    ::view-transition-new(root) {
+      animation: fade-bg 600ms ease-in-out;
+    }
+
+
+    ::view-transition-old(site-logo),
+    ::view-transition-new(site-logo) {
+      animation-duration: 700ms;
+      animation-timing-function: cubic-bezier(.4,0,.2,1);
+    }
+
+
+    @keyframes fade-bg {
+      from {
+        background-color: #FCD9A0;
+      }
+      to {
+        background-color: #DA5512;
+      }
+    }
+
 
   </style>
 
@@ -56,15 +81,23 @@
   <meta name="twitter:card" content="summary_large_image" />
 
 
+
 </head>
 
 <body>
 
   <div class="min-h-screen flex flex-col justify-between"> 
 
-    <a href="./index.html" class="text-2xl md:text-4xl font-bold p-4">
-        HSU, CHEN-HSUAN<br>Portfolio
-    </a>
+
+  <a href="./index.html"
+    class="site-logo text-2xl md:text-4xl font-bold p-4"
+    style="view-transition-name: site-logo;"
+    onclick="navigate(event, './index.html')">
+    HSU, CHEN-HSUAN<br>Portfolio
+  </a>
+
+
+
 
     <div class="flex flex-col text-center justify-center">
 
@@ -116,7 +149,7 @@
           </a>
 
           <!-- 第三張貼紙 -->
-          <a href="https://drive.google.com/file/d/1tkh3oh7otGaL1e1VLUbtsYXG_11sxfee/view?usp=sharing " 
+          <a href="https://drive.google.com/file/d/10jQIQdztXquR4cgtYg2v23ujzKsXbwIZ/view?usp=sharing" 
             target="_blank" rel="noopener noreferrer"
             class="relative inline-block mx-2 transition duration-300 hover:scale-105 hover:drop-shadow-[0_8px_12px_rgba(0,0,0,0.35)]">
             
@@ -153,6 +186,19 @@
     </div>
 
   </div>
+
+  <script>
+    function navigate(e, url) {
+      if (!document.startViewTransition) return;
+
+      e.preventDefault();
+
+      document.startViewTransition(() => {
+        window.location.href = url;
+      });
+    }
+  </script>
+
 
 </body>
 </html>
