@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Chen-Hsuan Hsu</title>
-  <link rel="icon" type="image/png" href="./assets/icon.png" />
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Chen-Hsuan Hsu</title>
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <style>
-    /* 400 Regular */
-    @font-face {
-      font-family: 'SourceCodePro';
-      src: url('./assets/fonts/SourceCodePro-Regular.otf') format('opentype');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
+    <style>
+        /* 400 Regular */
+        @font-face {
+        font-family: 'SourceCodePro';
+        src: url('./assets/fonts/SourceCodePro-Regular.otf') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        }
 
-    /* 700 Bold */
-    @font-face {
-      font-family: 'SourceCodePro';
-      src: url('./assets/fonts/SourceCodePro-Bold.otf') format('opentype');
-      font-weight: 700;
-      font-style: bold;
-      font-display: swap;
-    }
+        /* 700 Bold */
+        @font-face {
+        font-family: 'SourceCodePro';
+        src: url('./assets/fonts/SourceCodePro-Bold.otf') format('opentype');
+        font-weight: 700;
+        font-style: bold;
+        font-display: swap;
+        }
 
-    /* 全站預設使用 */
-    body {
-      font-family: 'SourceCodePro', monospace;
-      background: #FCD9A0;
-      min-height: 100vh;
-      color: #083A75;
-      margin: 0;
-    }
+        /* 全站預設使用 */
+        body {
+        font-family: 'SourceCodePro', monospace;
+        background: #FCD9A0;
+        min-height: 100vh;
+        color: #083A75;
+        margin: 0;
+        }
 
-  </style>
+    </style>
+
+    <!-- 分享時會顯示的標題 -->
+    <meta property="og:title" content="Chen-Hsuan Hsu — About" />
+
+    <!-- 分享預覽的描述 -->
+    <meta property="og:description" content="Welcome to my portfolio!" />
+
+    <!-- 最重要：縮圖位置（絕對路徑） -->
+    <meta property="og:image" content="https://zoe2746.github.io/assets/og.png" />
+
 </head>
 
 <body class="min-h-screen flex flex-col justify-between">
@@ -140,7 +150,7 @@
     <div class="flex flex-col gap-6 px-8 md:px-24 lg:px-48">
 
         <!-- CTA -->
-        <div class="flex border-4 border-[#DA5512] bg-[#DA5512] bg-opacity-80 hover:bg-opacity-100 gap-4
+        <div class="group flex flex-col md:flex-row mx-4 border-4 border-[#DA5512] bg-[#DA5512] bg-opacity-80 hover:bg-opacity-100 gap-4
          p-8 rounded-3xl items-center">
 
             <div class="font-bold text-white">
@@ -152,7 +162,7 @@
             <div>
                 <a href="mailto:zoe2746@gmail.com" 
                     target="_blank" rel="noopener noreferrer"
-                    class="relative inline-block transition duration-300 hover:scale-105 hover:drop-shadow-[0_8px_12px_rgba(0,0,0,0.35)]">
+                    class="relative inline-block transition duration-300 hover:scale-105 group-hover:drop-shadow-[0_8px_12px_rgba(0,0,0,0.35)]">
                     
                     <svg xmlns="http://www.w3.org/2000/svg" width="117" height="83" viewBox="0 0 117 83" fill="none" class="block">
                     <path d="M116.98 41.24L100.29 50.91L101.63 70.17L82.67 65.19L73.53 82.48L58.49 69.89L43.45 82.48L34.31 65.2L15.35 70.17L16.69 50.91L0 41.24L16.69 31.57L15.35 12.32L34.31 17.29L43.45 0L58.49 12.6L73.53 0L82.67 17.29L101.63 12.32L100.29 31.57L116.98 41.24Z" fill="#E4961C"/>
