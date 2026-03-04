@@ -48,8 +48,14 @@
     <!-- NAVBAR -->
     <header class="w-full flex items-center justify-between p-4">
         <a href="./index.html" class="text-2xl md:text-4xl font-bold">
-            HSU, CHEN-HSUAN<br>Portfolio
+            <svg xmlns="http://www.w3.org/2000/svg"
+                width="36" height="36"
+                class="text-[#DA5512] hover:text-[#DC6A0B] transition-colors duration-200">
+                <circle cx="18" cy="18" r="18" class="fill-current" />
+            </svg>
         </a>
+
+
 
         <nav class="hidden md:flex justify-center items-center gap-6 text-xl">
             <a href="./about.html"
@@ -131,7 +137,7 @@
 
         <!-- SOLLY -->
         <div class="group relative rounded-3xl border-2 border-[#bba278]
-            bg-cover bg-center px-8 py-12 md:px-12 md:py-20 hover:bg-white
+            bg-cover bg-white bg-opacity-80 bg-center px-8 py-12 md:px-12 md:py-20 hover:bg-opacity-100
             flex flex-col justify-center"
             style="background-image: url('./assets/cards/solly_bg.png')">
 
@@ -172,7 +178,7 @@
 
                 <!-- RIGHT: image -->
                 <div class="md:col-span-3 flex items-center justify-center">
-                    <img src="./assets/cards/solly_product.png" class="max-h-[85%] object-contain">
+                    <img src="./assets/cards/solly_product.png" class="max-h-[85%] object-contain group-hover:scale-105 transition duration-300">
                 </div>
 
             </div>
@@ -228,7 +234,7 @@
                 <div class="md:col-span-3 flex justify-center">
                     <img
                         src="./assets/cards/metro.png"
-                        class="max-h-[360px] object-contain drop-shadow-2xl"
+                        class="max-h-[360px] object-contain drop-shadow-2xl group-hover:scale-105 transition duration-300"
                     />
                 </div>
 
@@ -279,7 +285,7 @@
 
                     <!-- RIGHT: image -->
                     <div class="md:col-span-3 flex items-end justify-center">
-                        <div class="h-full max-h-[420px] flex items-end justify-center">
+                        <div class="h-full max-h-[420px] flex items-end justify-center group-hover:scale-105 transition duration-300">
                             <img
                             src="./assets/cards/camp_photo.png"
                             class="h-full object-contain drop-shadow-2xl"
