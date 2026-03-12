@@ -30,9 +30,6 @@
       font-family: 'SourceCodePro', monospace;
       font-style: bold;
       background: #FCD9A0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       height: 100vh;
     }
 
@@ -73,27 +70,109 @@
     .folder:hover .social  { top: -100px; left: 30px; }
   </style>
 </head>
-<body>
+<body class="flex flex-col justify-center items-center">
 
-  <div class="folder">
-    <img src="./assets/folder.png" class="folder-icon" alt="Folder">
-    
-    <img src="./assets/c.png" class="folder-item social" alt="Social Media">
-    <img src="./assets/a.png" class="folder-item poster" alt="Poster">
-    <img src="./assets/b.png"  class="folder-item merch" alt="Merch">
+  <div class="flex">
 
-    Graphic
+    <div class="flex p-2 justify-center items-center gap-4">
+      <div class="relative group w-fit">
+        <img src="./assets/me_circle.png" class="max-h-[15vh] block">
+
+        <!-- 訊息通知泡泡 -->
+        <div class="absolute top-1 right-0 translate-x-1/2 -translate-y-1/4">
+          <div class="relative h-9 w-9 group-hover:w-52
+                      rounded-full group-hover:rounded-2xl
+                      bg-[#DA5512] text-white shadow-md
+                      overflow-hidden transition-all duration-300 ease-in-out
+                      flex items-center justify-center px-3">
+              
+            <!-- 預設顯示驚嘆號 -->
+            <span class="absolute inset-0 flex items-center justify-center text-left
+                          opacity-100 group-hover:opacity-0
+                          transition-opacity duration-150 font-bold">
+                !
+            </span>
+
+            <!-- hover後顯示完整訊息 -->
+            <span class="opacity-0 group-hover:opacity-100
+                          transition-opacity duration-300 delay-150
+                          whitespace-nowrap text-sm font-bold">
+                Hi! Nice to meet you
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="font-bold text-xl p-4 text-[#3a3a3a]">
+        許宸瑄 Zoe<br>
+        HSU, CHEN-HSUAN<br>
+        2003, Hsinchu
+      </div>
+    </div>
+
+    <div class="folder">
+      <img src="./assets/folder.png" class="folder-icon" alt="Folder">
+      
+      <img src="./assets/c.png" class="folder-item social" alt="Social Media">
+      <img src="./assets/a.png" class="folder-item poster" alt="Poster">
+      <img src="./assets/b.png"  class="folder-item merch" alt="Merch">
+
+    </div>
+
+    <div class="folder ">
+      <img src="./assets/folder.png" class="folder-icon" alt="Folder">
+      
+      <img src="./assets/c.png" class="folder-item social" alt="Social Media">
+      <img src="./assets/a.png" class="folder-item poster" alt="Poster">
+      <img src="./assets/b.png"  class="folder-item merch" alt="Merch">
+
+    </div>
 
   </div>
 
-  <div class="folder ">
-    <img src="./assets/folder.png" class="folder-icon" alt="Folder">
-    
-    <img src="./assets/c.png" class="folder-item social" alt="Social Media">
-    <img src="./assets/a.png" class="folder-item poster" alt="Poster">
-    <img src="./assets/b.png"  class="folder-item merch" alt="Merch">
+  <div class="text-[#3a3a3a] text-lg font-bold p-4 pt-1">
+      I am a <span class="text-[#DA5512] ">product designer</span> who sees design as <span class="text-[#000000] underline underline-offset-2 decoration-[#e4961c]">a way to solve problems</span>,<br> 
+      obsessed with making products both understandable and beautiful.<br>
 
+      With a background in Computer Science, I bring clear structure and logical thinking into my design process.<br>
+      <!--communicating clearly, understanding constraints, and shaping solutions that truly work in practice.-->
   </div>
+
+  <div class="hidden">
+    <div class="group w-[500px] h-[30vh] [perspective:1000px]">
+      <div class="relative h-full w-full rounded-3xl transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+        <!-- 正面 -->
+        <div class="absolute inset-0 rounded-3xl overflow-hidden [backface-visibility:hidden]">
+          <div class="h-full w-full bg-cover bg-center"
+              style="background-image: url('./assets/solly/SollyPortfolio.png')">
+          </div>
+
+          <div class="absolute top-3 right-3 bg-[#DA5512]/90 text-white font-semibold px-3 py-1 rounded-full">
+            UI/UX
+          </div>
+
+          <div class="absolute bottom-0 w-full bg-black/40 rounded-b-3xl backdrop-blur-sm py-3 px-4">
+            <div class="text-white font-bold text-xl">
+              Internship at AI SOLLY
+            </div>
+          </div>
+        </div>
+
+        <!-- 背面 -->
+        <div class="absolute inset-0 rounded-3xl bg-[#083A75] text-white p-6 [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-center">
+          <div class="text-2xl font-bold mb-3">AI SOLLY</div>
+          <div class="text-sm leading-6">
+            UX research, dashboard redesign, educator workflow improvement,
+            and interaction refinement for special education scenarios.
+          </div>
+        </div>
+
+      </div>
+     </div>
+  </div>
+
+
 
 </body>
 </html>

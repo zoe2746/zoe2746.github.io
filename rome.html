@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chen-Hsuan Hsu</title>
+  <title>Sapienza University Exchange | Hsu Chen-Hsuan Portfolio</title>
   <link rel="icon" type="image/png" href="./assets/icon.png" />
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
+
     @font-face {
       font-family: 'SourceCodePro';
-      src: url('./assets/fonts/SourceCodePro-Regular.otf') format('opentype');
+      src: url('./assets/fonts/SourceCodePro-Medium.otf') format('opentype');
       font-weight: 400;
       font-style: normal;
       font-display: swap;
@@ -25,43 +26,156 @@
       font-display: swap;
     }
 
+    @font-face {
+      font-family: 'Bibi';
+      src: url('./assets/fonts/Bibi5-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
     body {
       font-family: 'SourceCodePro', monospace;
-      background: #FCD9A0;
+      background: #ca5747;
       min-height: 100vh;
-      color: #083A75;
+      color: #3a3a3a;
       margin: 0;
     }
   </style>
   
 </head>
 
-<body class="min-h-screen flex flex-col justify-between">
+<body class="min-h-screen flex flex-col bg-[#ca5747]">
 
-  <!-- <a href="index.html">Home</a> <-->
+    <!-- <a href="index.html">Home</a> <-->
 
-    <div>
-        <div onclick="history.back()" 
-            class="fixed top-3 left-3 text-white font-bold text-xl drop-shadow-lg px-3 py-1 cursor-pointer hover:text-[#083A75]">
-            < Back
+    <main class="flex-1">
+      <a href="javascript:history.back()"
+          class="fixed top-3 left-3 text-white font-bold text-xl drop-shadow-lg z-50 px-3 py-1 cursor-pointer hover:text-white">
+          < Back
+      </a>
+
+      <div class="md:hidden relative h-[30vh] bg-cover bg-center"
+        style="background-image: url('./assets/rome/banner2.png')">
+      </div>
+
+      <div class="md:block hidden relative h-[30vh] bg-cover bg-center"
+        style="background-image: url('./assets/rome/banner.png')">
+      </div>
+
+      <div>
+        <div class="md:px-24 lg:px-48 py-12 px-4">
+          <h1 class="font-bold text-4xl text-white pl-4">
+            Exchange Program at Sapienza University of Rome
+          </h1>
         </div>
 
-    </div>
+        <div class="px-5 md:px-24 lg:px-48 flex flex-col">
+
+          <div class="text-[#3a3a3a] px-8">
+            
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2">
+
+            <div class="bg-white">
+              <img src="./assets/cards/rome3.png">
+            </div> 
+
+            <div class="text-white p-8 bg-[#b2a258] ">
+              DESIGN AND GRAPHIC LANGUAGES STUDIO
+              <br><br>
+              We are requested to produce two booklets in this studio, and this is the first.
+              <br>
+              As Italy has the best gelato in the world, I made it my subject of first booklet.
+
+            </div> 
+
+            <div class="text-white p-8 bg-[#efa0bb] ">
+              BOOK DESIGN AND TYPOGRAPHY STUDIO
+              <br><br>
+              In this studio, we are asked to design a font inspired by a singer of our choice.<br>
+            We chose Korean singer BIBI, who is cute and at the same time savage.
+            </div> 
+
+            <div class="bg-white">
+              <img src="./assets/cards/rome2.png" class="">
+            </div> 
+            
+            <div class="bg-white">
+              <img src="./assets/cards/rome1.png" class="">
+            </div> 
+
+            <div class="text-white p-8 bg-[#dd701d] ">
+              DESIGN AND GRAPHIC LANGUAGES STUDIO
+              <br><br>
+              The topic of the second booklet is "Something Interesting Happening in Rome", and I find the doors in Rome remind me of chocolate.
+            </div> 
+
+            <div class="text-white p-8 bg-[#751825] ">
+              IMAGE AND STORYTELLING STUDIO
+              <br><br>
+              I traveled to Budapest in December 
+            </div> 
+
+            <img src="./assets/rome/photo.png" class="">
+
+
+          </div>
+        </div>
+
+
+        <!-- content -->
+        <div class="hidden px-5 md:px-24 lg:px-48 flex flex-col">
+
+          <div class="flex flex-col items-center justify-center py-8 scale-105">
+            <img src="./assets/rome/gelato.png" class="mb-2">
+          </div>
+
+          <div class="inline-block font-bold text-white px-6 py-2 mt-6 m-2 my-4 bg-[#ca5747] rounded-3xl w-fit">
+            DESIGN AND GRAPHIC LANGUAGES STUDIO
+          </div>
+
+          <div class="text-[#3a3a3a] px-8">
+            We explored 
+          </div>          
+
+          <div class="inline-block font-bold text-white px-6 py-2 mt-6 m-2 my-4 bg-[#ca5747] rounded-3xl w-fit">
+            BOOK DESIGN AND TYPOGRAPHY STUDIO
+          </div>
+          <div class="text-[#3a3a3a] px-8">
+            In this studio, we are asked to design a font inspired by a singer of our choice.<br>
+            We chose Korean singer BIBI.
+          </div>
+
+          <div class="inline-block font-bold text-white px-6 py-2 mt-6 m-2 my-4 bg-[#ca5747] rounded-3xl w-fit">
+            IMAGE AND STORYTELLING STUDIO
+          </div>
+          <div class="text-[#3a3a3a] px-8">
+            In this studio, we are asked to design a font inspired by a singer of our choice.<br>
+            We chose Korean singer BIBI.
+          </div>
+      
+        </div>
+
+
+      </div>
+ 
+    </main>
 
     <!--FOOTER START-->
-    <div class="p-4 text-gray-500 font-bold text-center text-sm md:text-l">
+    <div class="p-4 text-white font-bold text-center text-sm md:text-l">
       <div>
         <a href="https://www.linkedin.com/in/zoe2746/" 
-          class="underline hover:text-[#DA5512]" 
+          class="underline hover:text-[#D1A14A]" 
           target="_blank">LinkedIn</a>
         |
         <a href="https://www.behance.net/zoe2746" 
-          class="underline hover:text-[#DA5512]" 
+          class="underline hover:text-[#D1A14A]" 
           target="_blank">Behance</a>
         |
         <a href="mailto:zoe2746@gmail.com" 
-          class="underline hover:text-[#DA5512]">zoe2746@gmail.com</a>
-
+          class="underline hover:text-[#D1A14A]">zoe2746@gmail.com</a>
       </div>
 
     </div>
@@ -69,3 +183,4 @@
 
 </body>
 </html>
+  

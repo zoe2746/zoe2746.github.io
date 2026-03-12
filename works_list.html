@@ -141,7 +141,8 @@
 
         <!-- SOLLY -->
         <div class="group relative rounded-3xl border-2 border-[#bba278]
-            bg-cover bg-white bg-opacity-80 bg-center px-8 py-12 md:px-12 md:py-20 hover:bg-opacity-100
+            bg-cover bg-white bg-opacity-80 hover:bg-opacity-100 bg-center 
+            px-8 py-12 md:px-12 md:py-20 
             flex flex-col justify-center"
             style="background-image: url('./assets/cards/solly_bg.png')">
 
@@ -244,10 +245,81 @@
 
             </div>
         </div>
+        
+        <!-- Roma -->
+        <div class="hidden group relative rounded-3xl border-2 border-[#bba278]
+                    px-8 py-12 md:px-12 md:py-8 bg-[#b2161d] bg-opacity-70 bg-center 
+                    flex flex-col justify-center">
+
+            <!-- overlay -->
+            <div class="absolute inset-0 bg-[#FCD9A0] bg-opacity-20 group-hover:bg-opacity-0"></div>
+
+            <div class="absolute top-3 right-3 bg-[#083A75]/80 text-white font-semibold px-3 py-1 rounded-full">
+                Graphic
+            </div>
+
+            <!-- content（一定要有 relative） -->
+            <div class="relative">
+
+                <!-- content -->
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+
+                    <!-- LEFT: text -->
+                    <div class="md:col-span-2 flex flex-col justify-center text-white group-hover:text-white">
+
+                        <div class="uppercase tracking-widest text-sm opacity-70 mb-3">
+                            Sapienza University of Rome
+                        </div>
+
+                        <h2 class="font-bold text-3xl leading-tight mb-4">
+                            Italy Exchange Program
+                        </h2>
+
+                        <p class="text-base leading-relaxed mb-6">
+                            Studied Design, Multimedia, and Visual Communication; completed courses in Graphic Design, Typography, and Photography
+                        </p>
+
+                        <a href="./rome.html"
+                        class="inline-flex items-center gap-2 w-fit py-2 px-4 rounded-full
+                                font-bold bg-[#D1A14A] bg-opacity-90
+                                group-hover:bg-opacity-100 group-hover:scale-105 group-hover:drop-shadow-xl transition duration-300 ">
+                        View case study →
+                    </a>
+                    </div>
+
+
+                    <!-- RIGHT: image -->
+                    <div class="md:col-span-3 flex items-end justify-center">
+                        <div class="relative w-full h-[450px] overflow-hidden
+                                    group-hover:scale-105 transition duration-300">
+                            
+                            <img
+                                src="./assets/cards/rome1.png"
+                                class="rome-slide absolute inset-0 w-full h-full object-contain drop-shadow-2xl opacity-100 transition-opacity duration-700"
+                            />
+
+                            <img
+                                src="./assets/cards/rome2.png"
+                                class="rome-slide absolute inset-0 w-full h-full object-contain drop-shadow-2xl opacity-0 transition-opacity duration-700"
+                            />
+
+                            <img
+                                src="./assets/cards/rome3.png"
+                                class="rome-slide absolute inset-0 w-full h-full object-contain drop-shadow-2xl opacity-0 transition-opacity duration-700"
+                            />
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
 
         <!-- GRAPHIC -->
         <div class="group relative rounded-3xl border-2 border-[#bba278]
-                    px-8 py-12 md:px-12 md:py-8 bg-cover bg-center
+                    px-8 py-12 md:px-12 md:py-12  bg-cover bg-center
                     flex flex-col justify-center"
             style="background-image: url('./assets/cards/camp_bg.png')">
 
@@ -288,8 +360,9 @@
                     </div>
 
                     <!-- RIGHT: image -->
-                    <div class="md:col-span-3 flex items-end justify-center">
-                        <div class="h-full max-h-[420px] flex items-end justify-center group-hover:scale-105 transition duration-300">
+                    <div class="md:col-span-3 flex items-center justify-center">
+                        <div class="h-full max-h-[420px] flex justify-center 
+                                    group-hover:scale-105 transition duration-300">
                             <img
                             src="./assets/cards/camp_photo.png"
                             class="h-full object-contain drop-shadow-2xl"
@@ -303,6 +376,7 @@
 
         </div>
 
+
     </section>
 
 
@@ -312,6 +386,22 @@
         <a href="https://www.behance.net/zoe2746" class="underline">Behance</a> |
         <a href="mailto:zoe2746@gmail.com" class="underline">zoe2746@gmail.com</a>
     </footer>
+
+
+    <script>
+        const slides = document.querySelectorAll('.rome-slide');
+        let currentSlide = 0;
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove('opacity-100');
+            slides[currentSlide].classList.add('opacity-0');
+
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            slides[currentSlide].classList.remove('opacity-0');
+            slides[currentSlide].classList.add('opacity-100');
+        }, 2000);
+    </script>
 
 </body>
 </html>
