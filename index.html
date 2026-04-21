@@ -59,6 +59,21 @@
       }
     }
 
+    .marquee-track {
+        display: inline-block;
+        min-width: max-content;
+        animation: marquee-left 22s linear infinite;
+    }
+
+    @keyframes marquee-left {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
 
   </style>
 
@@ -167,8 +182,8 @@
 
     </div>
 
-    <div class="p-4 text-gray-500 font-bold text-center text-sm md:text-l">
-      <div>
+    <div>
+      <div class="p-4 text-gray-500 font-bold text-center text-sm md:text-l">
         <a href="https://www.linkedin.com/in/zoe2746/" 
           class="underline hover:text-[#DA5512]" 
           target="_blank">LinkedIn</a>
@@ -182,9 +197,40 @@
 
       </div>
 
+      <section class="overflow-hidden py-2 mt-2 bg-[#DA5512] ">
+        <div class="marquee-track whitespace-nowrap">
+            <span class="mx-8 font-bold text-white text-base md:text-sm">
+                I’m seeking a summer internship opportunity from June 15 to August.  
+                If you’re looking for someone who’s curious, eager to learn, and excited to explore UI, UX, and frontend, I’d love to connect!
+            </span>
+
+            <span class="mx-8 font-bold text-white text-base md:text-sm">
+                I’m seeking a summer internship opportunity from June 15 to August.  
+                If you’re looking for someone who’s curious, eager to learn, and excited to explore UI, UX, and frontend, I’d love to connect!
+            </span>
+            
+        </div>
+      </section>
     </div>
 
   </div>
+
+  
+
+  <script>
+        const slides = document.querySelectorAll('.rome-slide');
+        let currentSlide = 0;
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove('opacity-100');
+            slides[currentSlide].classList.add('opacity-0');
+
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            slides[currentSlide].classList.remove('opacity-0');
+            slides[currentSlide].classList.add('opacity-100');
+        }, 2000);
+    </script>
 
 
 </body>
