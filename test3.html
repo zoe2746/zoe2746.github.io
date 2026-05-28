@@ -38,10 +38,11 @@
       background: #FCD9A0;
       min-height: 100vh;
       margin: 0;
-      overflow: auto;
+      overflow: hidden;
     }
 
     .page {
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -101,6 +102,10 @@
     }
 
     @media (max-width: 768px) {
+      body {
+        overflow: auto;
+      }
+
       .page {
         padding: 24px 16px;
       }
@@ -118,23 +123,27 @@
       padding: 8px;
     }
 
+
     .marquee-track {
-      display: inline-block;
-      min-width: max-content;
-      animation: marquee-left 22s linear infinite;
+        display: inline-block;
+        min-width: max-content;
+        animation: marquee-left 22s linear infinite;
     }
 
     .marquee-section {
+      position: fixed;
+      left: 0;
+      bottom: 0;
       width: 100%;
     }
 
     @keyframes marquee-left {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
     }
   </style>
 
@@ -158,74 +167,58 @@
 
 </head>
 
+
 <body>
 
-  <main class="min-h-screen flex flex-col">
+  
+  <main class="page flex flex-col md:flex-row">
 
-    <section class="page flex flex-col md:flex-row flex-1 ">
+    <div class="md:w-[40vw] p-4">
 
-      <div class="md:w-[40vw] p-4">
-
-        <div class="text-[#da5512] font-bold text-3xl p-4">
-          Hi I'm Chen-Hsuan,<br> a product designer.
-        </div>
-
-        <div class="text-[#3a3a3a] font-bold p-4 pt-1">
-          I am a <span class="text-black">product designer</span> who sees design as <span class="text-[#000000] underline underline-offset-2 decoration-[#e4961c]">a way to solve problems</span>,<br> 
-          obsessed with making products both understandable and beautiful.<br>
-
-          With a background in Computer Science, I bring clear structure and logical thinking into my design process.<br>
-          <!--communicating clearly, understanding constraints, and shaping solutions that truly work in practice.-->
-        </div>
+      <div class="text-[#da5512] font-bold text-3xl p-4">
+        Hi I'm Chen-Hsuan,<br> a product designer.
       </div>
 
-      <div class="nav-blocks">
-        <a href="https://drive.google.com/file/d/1p6pj0boqLMFciKIjCga6Z4jXTS9eWv0s/view?usp=sharing" 
-          target="_blank" rel="noopener noreferrer" class="nav-card resume-card" aria-label="Resume">
-          <img src="./assets/test/Resume.png" alt="Resume">
-        </a>
+      <div class="text-[#3a3a3a] font-bold p-4 pt-1">
+        I am a <span class="text-black ">product designer</span> who sees design as <span class="text-[#000000] underline underline-offset-2 decoration-[#e4961c]">a way to solve problems</span>,<br> 
+        obsessed with making products both understandable and beautiful.<br>
 
-        <a href="./works_list.html" class="nav-card works-card" aria-label="Works">
-          <img src="./assets/test/Works.png" alt="Works">
-        </a>
+        With a background in Computer Science, I bring clear structure and logical thinking into my design process.<br>
+       <!--communicating clearly, understanding constraints, and shaping solutions that truly work in practice.-->
 
-        <a href="./about.html" class="nav-card about-card" aria-label="About Me">
-          <img src="./assets/test/About.png" alt="About Me">
-        </a>
       </div>
+    </div>
 
-    </section>
+    <div class="nav-blocks">
+      <a href="https://drive.google.com/file/d/1p6pj0boqLMFciKIjCga6Z4jXTS9eWv0s/view?usp=sharing" 
+        target="_blank" rel="noopener noreferrer" class="nav-card resume-card" aria-label="Resume">
+        <img src="./assets/test/Resume.png" alt="Resume">
+      </a>
 
-    <!-- FOOTER START -->
-    <footer class="p-4 text-gray-500 font-bold text-center text-sm md:text-l">
-      <a href="https://www.linkedin.com/in/zoe2746/" 
-        class="underline hover:text-[#DA5512]" 
-        target="_blank">LinkedIn</a>
-      |
-      <a href="https://www.behance.net/zoe2746" 
-        class="underline hover:text-[#DA5512]" 
-        target="_blank">Behance</a>
-      |
-      <a href="mailto:zoe2746@gmail.com" 
-        class="underline hover:text-[#DA5512]">zoe2746@gmail.com</a>
-    </footer>
-    <!-- FOOTER END -->
+      <a href="./works_list.html" class="nav-card works-card" aria-label="Works">
+        <img src="./assets/test/Works.png" alt="Works">
+      </a>
 
-    <section class="marquee-section overflow-hidden py-2 bg-[#DA5512]">
-      <div class="marquee-track whitespace-nowrap">
-        <span class="mx-8 font-bold text-white text-base md:text-sm">
-          I’m seeking a summer internship opportunity from June 15 to August.  
-          If you’re looking for someone who’s curious, eager to learn, and excited to explore UI, UX, and frontend, I’d love to connect!
-        </span>
-
-        <span class="mx-8 font-bold text-white text-base md:text-sm">
-          I’m seeking a summer internship opportunity from June 15 to August.  
-          If you’re looking for someone who’s curious, eager to learn, and excited to explore UI, UX, and frontend, I’d love to connect!
-        </span>
-      </div>
-    </section>
+      <a href="./about.html" class="nav-card about-card" aria-label="About Me">
+        <img src="./assets/test/About.png" alt="About Me">
+      </a>
+    </div>
 
   </main>
+
+  <section class="marquee-section overflow-hidden py-2 bg-[#DA5512]">
+    <div class="marquee-track whitespace-nowrap">
+      <span class="mx-8 font-bold text-white text-base md:text-sm">
+        I’m seeking a summer internship opportunity from June 15 to August.  
+        If you’re looking for someone who’s curious, eager to learn, and excited to explore UI, UX, and frontend, I’d love to connect!
+      </span>
+
+      <span class="mx-8 font-bold text-white text-base md:text-sm">
+        I’m seeking a summer internship opportunity from June 15 to August.  
+        If you’re looking for someone who’s curious, eager to learn, and excited to explore UI, UX, and frontend, I’d love to connect!
+      </span>
+    </div>
+  </section>
 
   <script>
     const navCards = Array.from(document.querySelectorAll('.nav-card'));
@@ -248,6 +241,7 @@
         });
       });
     });
+
   </script>
 
 </body>
