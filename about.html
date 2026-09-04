@@ -54,19 +54,30 @@
     
 
     <!-- NAVBAR -->
-    <header class="w-full flex items-center justify-between p-4">
-        <a href="./index.html" class="text-2xl md:text-4xl font-bold">
+    <header class="w-full flex items-center justify-between sticky top-0 z-50 p-4">
+        
+        
+        <a href="./index.html" class="md:hidden text-2xl md:text-4xl font-bold text-[#083A75]">
             HSU, CHEN-HSUAN<br>Portfolio
         </a>
+        <a href="./index.html" class="hidden md:flex text-2xl md:text-4xl font-bold">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                width="36" height="36"
+                class="text-[#DA5512] hover:text-[#DC6A0B] transition-colors duration-200">
+                <circle cx="18" cy="18" r="18" class="fill-current" />
+            </svg>
+        </a>
 
-        <nav class="hidden md:flex justify-center items-center gap-6 text-xl">
+
+
+        <nav class="hidden md:flex justify-center items-center gap-6 text-xl text-[#083A75]">
             <a href="./about.html"
             class="transition duration-300 font-bold text-[#DA5512]">
             about
             </a>
 
             <a href="./works_list.html"
-            class="transition duration-300  hover:scale-105 hover:font-bold">
+            class="transition duration-300 hover:scale-105 hover:font-bold">
             works
             </a>
 
@@ -95,7 +106,7 @@
     </header>
 
     <!-- 手機版展開選單 -->
-    <nav id="mobile-nav" class="md:hidden hidden px-4 pb-3 flex flex-col items-end gap-2 text-base">
+    <nav id="mobile-nav" class="md:hidden hidden px-4 flex flex-col items-end gap-2 text-base">
         <a href="./about.html"
             class="px-2 pd-1 text-[#DA5512] font-bold">
             about
@@ -104,14 +115,16 @@
             class="px-2 pd-1 text-[#083A75] font-bold">
             works
         </a>
+
         <a href="https://drive.google.com/file/d/1p6pj0boqLMFciKIjCga6Z4jXTS9eWv0s/view?usp=sharing"
+            target="_blank" rel="noopener noreferrer"
             class="px-2 pd-1 text-[#083A75] font-bold">
             resume
         </a>
     </nav>
 
     <!-- About -->
-    <div class="relative grid grid-cols-1 md:grid-cols-3 md:px-24 lg:px-48 lg:pt-20 pb-10 ">
+    <div class="relative grid grid-cols-1 md:grid-cols-3 md:mx-24 lg:mx-48 lg:mt-20 mb-10 ">
 
         <!-- Photo -->
         <div class="hidden md:flex flex-col md:col-span-2 justify-between">
@@ -153,8 +166,8 @@
    
     <div class="flex flex-col gap-6 px-8 md:px-24 lg:px-48">
 
-        <!-- CTA -->
-        <div class="group flex flex-col md:flex-row mx-4 border-4 border-[#DA5512] bg-[#DA5512] bg-opacity-80 hover:bg-opacity-100 gap-4
+        <!-- CTA 2026 -->
+        <div class="hidden group flex flex-col md:flex-row mx-4 border-4 border-[#DA5512] bg-[#DA5512] bg-opacity-80 hover:bg-opacity-100 gap-4
          p-8 rounded-3xl items-center">
 
             <div class="font-bold text-white">
@@ -194,8 +207,7 @@
 
         <div class="font-bold text-l px-4 text-[#3a3a3a]">
             <span class="text-[#083A75] ">Education</span><br>
-            National Taiwan Normal University<br>
-            B.S. in Computer Science (Expected 2026)<br>
+            B.S. in Computer Science (Expected 2026) | National Taiwan Normal University<br>
             <span class="text-[#555555] text-sm">Discovered my interest in product design through cross-disciplinary projects.</span>
         </div>
 
