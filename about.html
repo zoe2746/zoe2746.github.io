@@ -158,12 +158,12 @@
     </nav>
 
     <!--電腦版grid-->
-    <main class="desktop-grid hidden md:grid w-full">
+    <main class="hidden desktop-grid md:grid grid-cols-1 md:grid-cols-[repeat(18,1fr)] w-full">
         <!-- Name -->
         <div
             class="
-                col-start-4 col-span-4
-                row-start-2 row-span-1
+                md:col-start-4 md:col-span-4
+                md:row-start-2 md:row-span-2
                 flex items-top font-bold text-black
                 text-lg
             ">
@@ -177,10 +177,10 @@
         
         <div
             class="
-                col-start-4 col-span-7
-                row-start-4 row-span-2
+                md:col-start-4 md:col-span-7
+                md:row-start-4 md:row-span-2
                 flex items-top text-white bg-[#e4961c]
-                text-xs lg:text-sm xl:text-base
+                text-sm xl:text-base
             ">
             <div>
                 I am a product designer who sees design as <span class="font-bold ">a way to solve problems,</span>
@@ -193,10 +193,10 @@
 
         <div
             class="
-                col-start-3 col-span-6
-                row-start-7 row-span-8
+                md:col-start-3 md:col-span-6
+                md:row-start-7 md:row-span-8
                 flex items-top text-white bg-[#083A75]
-                text-xs lg:text-sm xl:text-base
+                text-sm xl:text-base
             ">
             <div>
                 <span class="font-bold">Experience</span><br><br>
@@ -217,7 +217,7 @@
                 Studied Design, Multimedia, and Visual Communication<br><br>
 
                 <span class="font-bold">Metro Hackathon 2024 - 1st Place</span><br>
-                Responsible for UI/UX<br><br>
+                Responsible for UI/UX and the visual of final presentation<br><br>
                 
 
                 <br>
@@ -227,10 +227,10 @@
 
         <div
             class="
-                col-start-11 col-span-7
-                row-start-12 row-span-4
+                md:col-start-11 md:col-span-7
+                md:row-start-10 md:row-span-4
                 flex items-top text-white bg-[#DC6A0B]
-                text-xs lg:text-sm xl:text-base
+                text-sm xl:text-base
             ">
             <div>
                 <span class="font-bold">Skills</span><br><br>
@@ -243,26 +243,26 @@
 
         <div
             class="
-                col-start-5 col-span-11
-                row-start-[17] row-span-2
+                md:col-start-5 md:col-span-11
+                md:row-start-[16] md:row-span-2
                 flex items-top text-white bg-[#DA5512]
-                text-xs lg:text-sm xl:text-base
+                text-sm xl:text-base
             ">
             <div>
                 <span class="font-bold">What people say about me!</span><br><br>
                 Responisble - I follow through and deliver what I commit to.<br>
                 Logical thinking - I approach problems with structure and clarity.<br>
-                Straight Forward - I communicate honestly and directly, making collaboration smooth.<br>
+                Straight Forward - I communicate honestly and directly, making collaboration smooth.<br><br>
 
             </div>
         </div>
 
         <div
             class="
-                col-start-13 col-span-4
-                row-start-4 row-span-5
-                flex items-top text-white
-                text-xs lg:text-sm xl:text-base
+                md:col-start-13 md:col-span-4
+                md:row-start-4 md:row-span-5
+                hidden md:flex items-top text-white
+                text-sm xl:text-base
             ">
             <div class="flex-1 flex items-end justify-end">
                 <img src="./assets/me.png" class=" max-h-[300px]"> 
@@ -271,7 +271,7 @@
     </main>
 
     <!-- About 手機版-->
-    <div class="md:hidden relative grid grid-cols-1 md:grid-cols-3 md:mx-24 lg:mx-48 lg:mt-20 mb-10 ">
+    <div class="text-sm mx-4 md:hidden relative grid grid-cols-1 md:grid-cols-3 md:mx-24 lg:mx-48 lg:mt-20 mb-10 ">
 
         <!-- Photo -->
         <div class="hidden md:flex flex-col md:col-span-2 justify-between">
@@ -309,22 +309,21 @@
         </div>
     </div>
    
-    <div class="md:hidden flex flex-col gap-6 px-8 md:px-24 lg:px-48">
+    <div class="text-sm md:hidden flex flex-col gap-6 px-4 md:px-24 lg:px-48">
 
         <!-- Texts -->
-        <div class="font-bold text-l px-4 text-[#3a3a3a]">
-            <span class="text-[#083A75] ">Skills</span><br>
-            Design & Research | Information Architecture • User Flow Mapping • Wireframing • Prototyping<br>
-            Tools | Figma • Adobe Illustrator • HTML • Tailwind CSS<br>
-            Languages | English (TOEIC 945, IELTS 7.5) • Chinese (Native)
-            <br>
-            <span class="text-[#555555] text-sm">Currently learning React and Italian during winter break.</span>
-        </div>
-
         <div class="font-bold text-l px-4 text-[#3a3a3a]">
             <span class="text-[#083A75] ">Education</span><br>
             B.S. in Computer Science (Expected 2026) | National Taiwan Normal University<br>
             <span class="text-[#555555] text-sm">Discovered my interest in product design through cross-disciplinary projects.</span>
+        </div>
+
+        <div class="font-bold text-l px-4 text-[#3a3a3a]">
+            <span class="text-[#083A75] ">Skills</span><br>
+            Design & Research<br>Information Architecture • User Flow Mapping • Wireframing • Prototyping<br><br>
+            Tools<br>Figma • Adobe Illustrator • HTML • Tailwind CSS<br><br>
+            Languages<br>English (TOEIC 945, IELTS 7.5) • Chinese (Native)
+            <br>
         </div>
 
         <div class="font-bold text-l px-4 text-[#3a3a3a]">
