@@ -38,7 +38,10 @@
 
         .desktop-grid {
             grid-template-columns: repeat(18, 1fr);
-            grid-template-rows: repeat(20, calc(100vw / 18));
+            grid-auto-rows: minmax(
+                calc(100vw / 18),
+                auto
+            );
 
             background-image:
                 linear-gradient(to right, rgba(218, 85, 18, 0.2) 1px, transparent 1px),
