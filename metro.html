@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Metro Hackathon 1st Place | Hsu Chen-Hsuan Portfolio</title>
+  <title>Taipei Metro Hackathon (1st Place) | Hsu Chen-Hsuan Portfolio</title>
   <link rel="icon" type="image/png" href="./assets/icon.png" />
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -11,7 +11,7 @@
 
     @font-face {
       font-family: 'SourceCodePro';
-      src: url('./assets/fonts/SourceCodePro-Regular.otf') format('opentype');
+      src: url('./assets/fonts/SourceCodePro-Medium.otf') format('opentype');
       font-weight: 400;
       font-style: normal;
       font-display: swap;
@@ -30,61 +30,310 @@
       font-family: 'SourceCodePro', monospace;
       background: #FCD9A0;
       min-height: 100vh;
-      color: #083A75;
+      color: #3a3a3a;
       margin: 0;
     }
+
+
   </style>
   
 </head>
 
-  <body>
+<body class="min-h-screen flex flex-col">
 
     <!-- <a href="index.html">Home</a> <-->
 
-      <div>
-        <div onclick="history.back()" 
-          class="fixed top-3 left-3 text-white font-bold text-xl drop-shadow-lg px-3 py-1 cursor-pointer hover:text-[#083A75]">
+    <main class="flex-1">
+        <a href="javascript:history.back()"
+          class="fixed top-3 left-3 text-white font-bold text-xl drop-shadow-lg z-50 px-3 py-1 cursor-pointer hover:text-[#DA5512]">
           < Back
-        </div>
-        <img src="./assets/metro/final-04.jpg">
-        <img src="./assets/metro/final-05.jpg">
-        <img src="./assets/metro/final-06.jpg">
-        <img src="./assets/metro/final-07.jpg">
-        <img src="./assets/metro/final-08.jpg">
-        <img src="./assets/metro/final-09.jpg">
-        <img src="./assets/metro/final-10.jpg">
-        <img src="./assets/metro/final-11.jpg">
+        </a>
 
-        <div class="w-full aspect-video">
-          <iframe
-            class="w-full h-full"
-            src="https://www.youtube.com/embed/nvBULT4mdTQ?si=eTn9MuBdmqprlW0G"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-          </iframe>
+        <div class="md:hidden relative h-[30vh] bg-cover bg-center"
+            style="background-image: url('./assets/metro/final-04.jpg')">
         </div>
+
+        <div class="md:block hidden relative h-[30vh] bg-cover bg-center"
+            style="background-image: url('./assets/metro/metro_banner.png')">
+        </div>
+
+        <div class="text-sm md:text-base">
+            <div class="md:px-24 lg:px-48 py-12">
+                <h1 class="font-bold text-3xl md:text-4xl text-[#3a3a3a] pl-4">
+                    Taipei Metro Hackathon 2024
+                </h1>
+            </div>
+
+            <div class="px-2 md:px-24 lg:px-48 flex flex-col">
+              <div class="inline-block font-bold text-white px-6 py-2 m-2 my-4 bg-[#00447a] rounded-3xl w-fit">
+                  Project Overview
+              </div>
+              <div class="px-4 md:px-8">
+                  The challenge was to redesign the Taipei Metro Go app by improving its visual design, 
+                  information structure, user experience, and service innovation.<br>
+                  As the <span class="font-bold">main UI/UX designer</span> in a four-person team, 
+                  I participated in concept development and focused on user research, UX restructuring, interface design, and prototyping. 
+                  I also contributed to the structure and visual design of the final presentation.
+              </div>
+
+              <div class="inline-block font-bold text-white px-6 py-2 m-2 mt-6 mb-4 bg-[#00447a] rounded-3xl w-fit">
+                  User Research
+              </div>
+              <div class="px-4 md:px-8">
+                  We started by conducting a user survey and reviewing feedback from the App Store to understand 
+                  how people were using the existing Taipei Metro Go app.<br><br>
+
+                  We identified 2 key problems by analyzing the survey and feedbacks:<br>
+
+                  <span class="font-bold">01 — Complex and inefficient interactions</span><br>
+                  Users found the interface difficult to navigate, with some common tasks requiring unnecessary steps.<br>
+
+                  <span class="font-bold">02 — Lack of compelling reasons to use the app</span><br>
+                  Beyond basic transit information, users lacked a strong reason to return to the app as part of their everyday commute.<br><br>
+
+                  These findings shaped two design directions:<br>
+                  <span class="font-bold">simplifying the existing experience and introducing services that provide greater everyday value.</span>
+              </div>
+
+
+              <div class="inline-block font-bold text-white px-6 py-2 m-2 mt-6 mb-4 bg-[#00447a] rounded-3xl w-fit">
+                  UX Strategy
+              </div>
+              <div class="px-4 md:px-8">
+                  Based on our research findings, <span class="font-bold">I reorganized the app around five core functions,</span>
+                  removing unnecessary complexity and establishing a clearer navigation structure.<br><br>
+                  I then developed <span class="font-bold">wireframes</span> for each section and <span class="font-bold">mapped key user flows</span> to identify unnecessary steps in the existing experience.<br>
+                  One example was the journey-planning flow, where station and carriage information were previously scattered across multiple screens.
+                  I redesigned the flow so users could access relevant route and carriage information with fewer steps.<br>
+              </div>
+              <div class="flex flex-col items-center justify-center px-8 py-8 scale-105 text-center">
+                  <img src="./assets/metro/01_userflow.png" class="mb-2">
+                  <span class="italic">Before / After flow diagram of <br>the action "search for carriage location"</span>
+              </div>
+
+              <div class="inline-block font-bold text-white px-6 py-2 m-2 mt-6 mb-4 bg-[#00447a] rounded-3xl w-fit">
+                  Visual System
+              </div>
+              <div class="px-4 md:px-8">
+                  To keep the redesign aligned with Taipei Metro’s identity, 
+                  I studied its 2021 brand identity guidelines and translated the visual language into a lightweight UI system.<br><br>
+                  Instead of using the brand gradient across large areas, I applied it selectively to key elements such as the logo and headings.<br>
+                  Rounded typography, controls, cards, and icons were used to complement the flowing forms of the updated brand identity 
+                  while keeping the interface visually lightweight.
+              </div>
+              <div class="flex flex-col items-center justify-center px-8 py-8 scale-105">
+                <img src="./assets/metro/02_design_system.png" class="mb-2">
+              </div>
+
+
+              <div class="inline-block font-bold text-white px-6 py-2 m-2 mt-6 mb-4 bg-[#00447a] rounded-3xl w-fit">
+                Design Solutions
+              </div>
+              <div class="flex flex-col gap-8 md:gap-16">
+
+                  <!-- ① Transit Card -->
+                  <div class="flex flex-col md:flex-row items-center gap-8">
+
+                      <!-- Text -->
+                      <div class="w-full md:w-1/2 min-w-0">
+                          <div class="px-4 md:px-8">
+                              <span class="font-bold">
+                                  ① Transit Card as the Core Experience
+                              </span>
+                              <br>
+                              The digital transit card ranked as the most requested feature
+                              in our survey, so we made it a core part of the experience.
+                              <br>
+                              Frequently used card and account features were prioritized,
+                              while less essential functions were reorganized under
+                              “Other Services” for easier access.
+                          </div>
+                      </div>
+
+                      <!-- Images -->
+                      <div class="w-full md:w-1/2 min-w-0 flex justify-center gap-4 px-4">
+
+                          <figure class="w-[45%] text-center">
+                              <img
+                                  src="/assets/metro/03_before_1.png"
+                                  class="w-full h-auto object-contain"
+                                  alt="Original Taipei Metro transit card interface"
+                              >
+                              <figcaption class="mt-2 text-sm italic">
+                                  Before
+                              </figcaption>
+                          </figure>
+
+                          <figure class="w-[45%] text-center">
+                              <img
+                                  src="/assets/metro/03_after_1.png"
+                                  class="w-full h-auto object-contain"
+                                  alt="Redesigned transit card interface"
+                              >
+                              <figcaption class="mt-2 text-sm italic">
+                                  After
+                              </figcaption>
+                          </figure>
+
+                      </div>
+                  </div>
+
+
+                  <!-- ② Arrival Information -->
+                  <div class="flex flex-col md:flex-row items-center gap-8">
+
+                      <!-- Images -->
+                      <div class="order-2 md:order-1 w-full md:w-1/2 min-w-0 flex justify-center gap-4 px-4">
+
+                          <figure class="w-[45%] text-center">
+                              <img
+                                  src="/assets/metro/03_before_2.png"
+                                  class="w-full h-auto object-contain"
+                                  alt="Original arrival information interface"
+                              >
+                              <figcaption class="mt-2 text-sm italic">
+                                  Before
+                              </figcaption>
+                          </figure>
+
+                          <figure class="w-[45%] text-center">
+                              <img
+                                  src="/assets/metro/03_after_2.png"
+                                  class="w-full h-auto object-contain"
+                                  alt="Redesigned arrival information interface"
+                              >
+                              <figcaption class="mt-2 text-sm italic">
+                                  After
+                              </figcaption>
+                          </figure>
+
+                      </div>
+
+                      <!-- Text -->
+                      <div class="order-1 md:order-2 w-full md:w-1/2 min-w-0">
+                          <div class="px-4 md:px-8">
+                              <span class="font-bold">
+                                  ② Arrival Information & Quick Actions
+                              </span>
+                              <br>
+                              Arrival information was redesigned with a card-based layout
+                              for easier scanning.
+                              <br>
+                              Favorites and Get-off Reminders were added as quick actions,
+                              allowing users to access these features without switching screens.
+                          </div>
+                      </div>
+
+                  </div>
+
+
+                  <!-- ③ Journey Planning -->
+                  <div class="flex flex-col md:flex-row items-center gap-8">
+
+                      <!-- Text -->
+                      <div class="w-full md:w-1/2 min-w-0">
+                          <div class="px-4 md:px-8">
+                              <span class="font-bold">
+                                  ③ Journey Planning & Carriage Information
+                              </span>
+                              <br>
+                              The journey-planning flow was redesigned to surface useful
+                              information more directly.
+                              <br>
+                              Users can now see which carriage is closest to specific exits
+                              or station facilities, without having to open an additional
+                              station page.
+                          </div>
+                      </div>
+
+                      <!-- Images -->
+                      <div class="w-full md:w-1/2 min-w-0 flex justify-center gap-4 px-4">
+
+                          <figure class="w-[45%] text-center">
+                              <img
+                                  src="/assets/metro/03_before_3.png"
+                                  class="w-full h-auto object-contain"
+                                  alt="Original journey planning interface"
+                              >
+                              <figcaption class="mt-2 text-sm italic">
+                                  Before
+                              </figcaption>
+                          </figure>
+
+                          <figure class="w-[45%] text-center">
+                              <img
+                                  src="/assets/metro/03_after_3-1.png"
+                                  class="w-full h-auto object-contain"
+                                  alt="Redesigned journey planning interface"
+                              >
+                              <figcaption class="mt-2 text-sm italic">
+                                  After
+                              </figcaption>
+                          </figure>
+
+                      </div>
+                  </div>
+
+              </div>
+
+              <div class="inline-block font-bold text-white px-6 py-2 m-2 mt-6 mb-4 bg-[#00447a] rounded-3xl w-fit">
+                  Presentation
+              </div>
+              <div class="px-4 md:px-8">
+                  In addition to the product experience, I worked on the structure and visual design of the final pitch presentation.
+                  The goal was to turn our research findings, design decisions, 
+                  and new service concepts into a clear visual narrative that the judges could quickly understand within a limited presentation time.
+              </div>
+              <div class="px-4 md:px-8">
+                  <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+                      padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                      border-radius: 8px; will-change: transform;">
+                      <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                          src="https://www.canva.com/design/DAGGP3GBxKY/DxXlAWQqkrjCqQNb-3bjqA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                      </iframe>
+                  </div>
+                  <div class="flex flex-col items-center justify-center px-8 scale-105 text-center">
+                      <span class="italic">Selected slides from the final pitch presentation, featuring the sections I contributed to.</span>
+                  </div>
+                  
+              </div>
+
+              <div class="inline-block font-bold text-white px-6 py-2 m-2 mt-6 mb-4 bg-[#00447a] rounded-3xl w-fit">
+                  Result / Takeaways
+              </div>
+              <div class="px-4 md:px-8">
+                  We won 1st Place at the 2024 Taipei Metro Hackathon.<br>
+                  This experience taught me that a strong idea also needs strong storytelling.
+                  Clear visual communication can make a concept more compelling and memorable.
+              </div>
+
+            </div>
+
+
+
+            
+        </div>
+ 
+    </main>
+
+    <!--FOOTER START-->
+    <div class="p-4 text-gray-500 font-bold text-center text-sm md:text-l">
+      <div>
+        <a href="https://www.linkedin.com/in/zoe2746/" 
+          class="underline hover:text-[#DA5512]" 
+          target="_blank">LinkedIn</a>
+        |
+        <a href="https://www.behance.net/zoe2746" 
+          class="underline hover:text-[#DA5512]" 
+          target="_blank">Behance</a>
+        |
+        <a href="mailto:zoe2746@gmail.com" 
+          class="underline hover:text-[#DA5512]">zoe2746@gmail.com</a>
       </div>
 
-      <div class="p-4 text-gray-500 font-bold text-center text-sm md:text-l">
-        <div>
-          <a href="https://www.linkedin.com/in/zoe2746/" 
-            class="underline hover:text-[#DA5512]" 
-            target="_blank">LinkedIn</a>
-          |
-          <a href="https://www.behance.net/zoe2746" 
-            class="underline hover:text-[#DA5512]" 
-            target="_blank">Behance</a>
-          |
-          <a href="mailto:zoe2746@gmail.com" 
-            class="underline hover:text-[#DA5512]">zoe2746@gmail.com</a>
+    </div>
+    <!--FOOTER END-->
 
-        </div>
-
-      </div>
-
-
-  </body>
+</body>
 </html>
+  
