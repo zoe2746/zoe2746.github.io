@@ -97,7 +97,7 @@
             works
             </a>
 
-            <a href="https://drive.google.com/file/d/1p6pj0boqLMFciKIjCga6Z4jXTS9eWv0s/view?usp=sharing"
+            <a href="https://drive.google.com/file/d/1ZiVUaQc9W1onFA1vdV7Mpd0uiPfwS4Q5/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             class="group inline-flex items-center transition duration-300 hover:scale-105 hover:font-bold">
@@ -140,32 +140,47 @@
     </header>
 
     <!-- 手機版展開選單 -->
-    <nav id="mobile-nav" class="md:hidden hidden px-4 flex flex-col items-end gap-2 text-base">
+    <nav
+        id="mobile-nav"
+        class="
+            md:hidden hidden
+            fixed top-[80px] right-4 z-50
+            flex flex-col items-end gap-2
+            text-base
+        "
+        >
         <a href="./about.html"
-            class="px-2 pd-1 text-[#DA5512] font-bold">
+        class="px-2 text-[#DA5512] font-bold">
             about
         </a>
+
         <a href="./works_list.html"
-            class="px-2 pd-1 text-[#083A75] font-bold">
+        class="px-2 text-[#083A75] font-bold">
             works
         </a>
 
-        <a href="https://drive.google.com/file/d/1p6pj0boqLMFciKIjCga6Z4jXTS9eWv0s/view?usp=sharing"
-            target="_blank" rel="noopener noreferrer"
-            class="px-2 pd-1 text-[#083A75] font-bold">
+        <a href="https://drive.google.com/file/d/1ZiVUaQc9W1onFA1vdV7Mpd0uiPfwS4Q5/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-2 text-[#083A75] font-bold inline-flex items-center gap-1">
             resume
+            <i
+                data-lucide="square-arrow-out-up-right"
+                stroke-width="3"
+                class="w-4 h-4">
+            </i>
         </a>
     </nav>
 
     <!--電腦版grid-->
-    <main class="hidden desktop-grid md:grid grid-cols-1 md:grid-cols-[repeat(18,1fr)] w-full">
+    <main class="desktop-grid md:grid grid-cols-1 md:grid-cols-[repeat(18,1fr)] w-full">
         <!-- Name -->
         <div
             class="
                 md:col-start-4 md:col-span-4
                 md:row-start-2 md:row-span-2
                 flex items-top font-bold text-black
-                text-lg
+                text-lg p-4
             ">
             <p>
                 許宸瑄 Z<span class="text-[#DA5512]">●</span>e<br>
@@ -181,6 +196,7 @@
                 md:row-start-4 md:row-span-2
                 flex items-top text-white bg-[#e4961c]
                 text-sm xl:text-base
+                mr-8 ml-4 md:m-0
             ">
             <div>
                 My interest in UX started during CS projects, when I realized that making something work was only half the challenge — making it intuitive and enjoyable to use mattered just as much.<br><br>
@@ -194,6 +210,7 @@
                 md:row-start-7 md:row-span-8
                 flex items-top text-white bg-[#083A75]
                 text-sm xl:text-base
+                ml-12 md:m-0
             ">
             <div>
                 <span class="font-bold">Experience & Education</span><br><br>
@@ -231,6 +248,7 @@
                 md:row-start-10 md:row-span-4
                 flex items-top text-white bg-[#DC6A0B]
                 text-sm xl:text-base
+                mr-12 md:m-0
             ">
             <div>
                 <span class="font-bold">Skills</span><br><br>
@@ -247,6 +265,7 @@
                 md:row-start-[16] md:row-span-2
                 flex items-top text-white bg-[#DA5512]
                 text-sm xl:text-base
+                ml-8 md:m-0
             ">
             <div>
                 <span class="font-bold">What people say about me!</span><br><br>
@@ -271,7 +290,7 @@
     </main>
 
     <!-- About 手機版-->
-    <div class="text-sm mx-4 md:hidden relative grid grid-cols-1 md:grid-cols-3 md:mx-24 lg:mx-48 lg:mt-20 mb-10 ">
+    <div class="text-sm mx-4 hidden relative grid grid-cols-1 md:grid-cols-3 md:mx-24 lg:mx-48 lg:mt-20 mb-10 ">
 
         <!-- Photo -->
         <div class="hidden md:flex flex-col md:col-span-2 justify-between">
@@ -309,7 +328,7 @@
         </div>
     </div>
    
-    <div class="text-sm md:hidden flex flex-col gap-6 px-4 md:px-24 lg:px-48">
+    <div class="text-sm hidden flex flex-col gap-6 px-4 md:px-24 lg:px-48">
 
         <!-- Texts -->
         <div class="font-bold text-l px-4 text-[#3a3a3a]">
@@ -342,7 +361,7 @@
 
     
     <!-- FOOTER START -->
-    <div class="p-4 text-gray-500 font-bold text-center text-sm md:text-l">
+    <div class="p-4 text-[#3a3a3a] font-bold text-center text-sm md:text-l">
         <div class="flex items-center justify-center gap-1">
 
             <a href="https://www.linkedin.com/in/zoe2746/"
