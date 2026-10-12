@@ -6,6 +6,7 @@
   <title>Solly Summer Intern | Hsu Chen-Hsuan Portfolio</title>
   <link rel="icon" type="image/png" href="./assets/icon.png" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
 
@@ -191,22 +192,95 @@
     </main>
 
     <!--FOOTER START-->
-    <div class="p-4 text-gray-500 font-bold text-center text-sm md:text-l">
-      <div>
-        <a href="https://www.linkedin.com/in/zoe2746/" 
-          class="underline hover:text-[#DA5512]" 
-          target="_blank">LinkedIn</a>
-        |
-        <a href="https://www.behance.net/zoe2746" 
-          class="underline hover:text-[#DA5512]" 
-          target="_blank">Behance</a>
-        |
-        <a href="mailto:zoe2746@gmail.com" 
-          class="underline hover:text-[#DA5512]">zoe2746@gmail.com</a>
-      </div>
+    <div class="p-4 text-[#3a3a3a] font-bold text-center text-sm md:text-l">
+      <div class="flex items-center justify-center gap-1">
 
-    </div>
-    <!--FOOTER END-->
+          <a href="https://www.linkedin.com/in/zoe2746/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group inline-flex items-center transition duration-300 underline hover:text-[#DA5512]">
+
+              LinkedIn
+
+              <span class="
+                  inline-flex
+                  w-0 opacity-0 ml-0
+                  group-hover:w-4
+                  group-hover:ml-1
+                  group-hover:opacity-100
+                  transition-all duration-200
+                  overflow-hidden
+              ">
+                  <i
+                      data-lucide="square-arrow-out-up-right"
+                      stroke-width="3"
+                      class="w-4 h-4 shrink-0">
+                  </i>
+              </span>
+          </a>
+
+          <span>|</span>
+
+          <a href="https://www.behance.net/zoe2746"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group inline-flex items-center transition duration-300 underline hover:text-[#DA5512]">
+
+              Behance
+
+              <span class="
+                  inline-flex
+                  w-0 opacity-0 ml-0
+                  group-hover:w-4
+                  group-hover:ml-1
+                  group-hover:opacity-100
+                  transition-all duration-200
+                  overflow-hidden
+              ">
+                  <i
+                      data-lucide="square-arrow-out-up-right"
+                      stroke-width="3"
+                      class="w-4 h-4 shrink-0">
+                  </i>
+              </span>
+          </a>
+
+          <span>|</span>
+
+          <button
+              onclick="copyEmail()"
+              class="group underline hover:text-[#DA5512] inline-flex items-center"
+          >
+              zoe2746@gmail.com
+
+              <span
+                  class="
+                      inline-flex
+                      w-0 opacity-0 ml-0
+                      group-hover:w-4
+                      group-hover:ml-1
+                      group-hover:opacity-100
+                      transition-all duration-200
+                      overflow-hidden
+                  "
+              >
+                  <i data-lucide="copy" stroke-width="3" class="w-4 h-4 shrink-0"></i>
+              </span>
+          </button>
+
+      </div>
+  </div>
+  <!--FOOTER END-->
+
+  <script>
+      lucide.createIcons();
+
+      function copyEmail() {
+          navigator.clipboard.writeText("zoe2746@gmail.com");
+      }
+  </script>
+
+  <!--FOOTER END-->
 
 </body>
 </html>
