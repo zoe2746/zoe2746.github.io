@@ -51,7 +51,7 @@
         </a>
 
         <div class="md:hidden relative h-[30vh] bg-cover bg-center"
-            style="background-image: url('./assets/cg_robot/background.png')">
+            style="background-image: url('./assets/cg_robot/bg.png')">
         </div>
 
         <div class="md:block hidden relative h-[30vh] bg-cover bg-center"
@@ -96,29 +96,115 @@
                     Scene & Visual Design
                 </div>
                 <div class="px-4 md:px-8">
-                  Scene
+                  <span class="font-bold">Scene</span><br>
                   The setting of the game is based on the sunset beach scene from Robot Dreams. 
                   This is the moment when Dog and Robot realize that Robot is broken, and it also becomes the moment when they are forced to separate. 
                   Since this scene is emotionally central to the movie, I wanted the player to return to that same place and give Robot another chance. 
                   Image on the left below is the actual scene from the movie, and the right is screenshot from my game.
+
+                    <div class="pt-4 flex justify-center">
+                        <img src="./assets/cg_robot/01_movie.png">
+                        <img src="./assets/cg_robot/01_me.png">
+                    </div>
                 </div>
-                <div>
-                    
+                
+
+                <div class="px-4 md:px-8">
+                    <br><span class="font-bold">Lighting</span><br>
+                    The lighting design also follows the idea of sunset. 
+                    During the game, the light source slowly moves downward, imitating the sun setting over time. 
+                    Players can see the shadow stretches as time went by. 
+                    This visual change helps show the passage of time and reinforces the feeling that the player is racing against the end of the day. 
                 </div>
 
+                <div class="px-4 md:px-8">
+                    <br><span class="font-bold">Visual Assets</span><br>
+                    For the items and boosters, I chose objects that are related to the movie. 
+                    The flowers come from Robot’s dream of Oz, and they become the main collectible in the game. 
+                    I also used a yellow cube as one of the boosters, referencing the yellow path in Oz that leads the way home. 
+                    For the speed booster, I used skaters, because roller skating is one of Dog and Robot’s happiest memories together.
+                    <br>
+                    Beside the obj files, I drew the flower like the movie, and the skater in a cartoonish style for the game UI.
+                    This makes the interface feel lighter and cuter, matching the tone of the original movie. 
+                    I also applied the font used in the movie poster, Cookit Regular, throughout the game.<br>
+
+                    <img src="./assets/cg_robot/02_visual_assets.png" class="drop-shadow-lg">
+                </div>
+
+                <div class="inline-block font-bold text-white px-6 py-2 m-2 mt-6 mb-4 bg-[#ec6300] rounded-3xl w-fit">
+                    Technical Choices
+                </div>
+                <div class="px-4 md:px-8">
+                    <span class="font-bold">Background</span><br>
+                    I used an environment cubemap to create the beach scene around the player. 
+                    I tried to convert a scene from the movie into a cubemap using Adobe Illustrator, Photoshop, and some drawing.<br>
+                    <br>
+                    <span class="font-bold">Camera</span><br> I used a third-person view so the player can clearly see Robot, the falling flowers, and the ground markers at the same time. 
+                    I also allowed the player to drag the mouse to rotate the view, because the environment is part of the game’s visual design and I wanted the player to be able to look around. 
+                    Before the game starts, the camera slowly rotates around the scene to show the sunset beach and the cubemap environment.<br>
+                    <br>
+                    <span class="font-bold">Projection</span><br>I used a perspective camera with a wider field of view (80) so the scene feels more open and less cramped. 
+                    Since the game is about catching falling objects, the player needs to see both the character and the nearby space clearly. 
+                    The canvas keeps a 4:3 ratio, and I set the display size to about 75% of the screen height, because full height felt a little too large during actual play.<br>
+                    <br>
+                    <span class="font-bold">Lighting</span><br>I used one point light with Phong shading. 
+                    The light is meant to imitate the sun, so it slowly moves downward as time passes. 
+                    This makes the scene feel closer to sunset, and players can also see the shadows stretch during the game. 
+                    I used ambient, diffuse, and specular lighting so that the objects are not completely flat: ambient keeps the darker parts visible, diffuse shows the object shapes and colors, and specular gives small highlights so the models look more three-dimensional.<br>
+                    <br>
+                    <span class="font-bold">Texture Mapping</span><br>
+                    I used texture on the flower model and the beach ground to make the scene feel less plain. 
+                    Some objects use solid colors instead of detailed textures, such as the yellow cube booster. 
+                    This is intentional because those objects need to be easy to recognize quickly during gameplay. 
+                    The visual style is not meant to be realistic; it is closer to a simple cartoon game inspired by the movie.<br>
+                    <br>
+                    <span class="font-bold">Game Feedback</span><br>
+                    I added pink-to-red blocks on the ground to show where the flowers will land. 
+                    Pink means the flower is still high in the air, and the color becomes red as it gets closer to the ground. 
+                    This helps the player predict where to move. 
+                    Boosters do not have landing markers because I wanted the markers to mainly guide the flower-collecting goal, while boosters stay as extra surprise items. 
+                    There are also sound effects for collecting flowers, getting boosters, clicking buttons, and reaching the win or lose state, so the player receives feedback without needing to look at the console.
+                </div>
+
+                <div class="inline-block font-bold text-white px-6 py-2 m-2 mt-6 mb-4 bg-[#ec6300] rounded-3xl w-fit">
+                    Challenges and Solutions
+                </div>
+                <div class="px-4 md:px-8">
+                    <span class="font-bold">Seamless Cubemap</span><br>
+                    I wanted the scene to feel like it extended into the distance, but stretching only certain parts of the image without creating visible seams was hard. Because of this, from some angles, the viewer can still tell that the environment is a box. I am very sad.
+                    <br><br>
+                    <span class="font-bold">First Person View / View Changing</span><br>
+                    Initially I planned to have the game played from first person view, and there are boosters that switches shortly back to third person view which is easier for the player to operate. However, after implementation, I found out it would be very, very difficult for the player detect and run to items, since it requires looking up and moving around, and also has to be fast enough. It is almost impossible to collect any flowers. So, eventually I had to remove first person view.
+                    <br>
+                    Same for the view rotating. After there are no first-person view, I tried to have it rotate to weird angles randomly as a kind of challenge for the player and will have boosters for entering rotating modes so player can rotate back to their likings. But since I use the arrow keys, if the scene rotates 180 degrees, it is counterintuitive to use the arrow keys, and the difficulty is again too high. So I gave up and it is now just a simple game. 
+                    <br><br>
+                    <span class="font-bold">More realistic beach ground</span><br>
+                    I wanted the robot to feel like it was standing directly inside the beach environment, but a cubemap is only a background and cannot be used as an actual ground surface. Therefore, I can only keep a simple ground object in the scene so that the robot, falling objects, and shadows would have a clear surface to interact with.
+                    <br><br>
+                    <span class="font-bold">Win ending</span><br>
+                    I originally wanted to make a more complete ending animation where Robot reunites with Dog after winning. In the final version, I simplified it into a win result screen, because I cannot find a decent Dog obj file. In fact, I find none. Luckily the robot is easy to build by hierarchy transformation so I made it by myself.  
+
+                </div>
+
+                <div class="inline-block font-bold text-white px-6 py-2 m-2 mt-6 mb-4 bg-[#ec6300] rounded-3xl w-fit">
+                    Demo
+                </div>
+                <div class="items-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/agHu9eUwmDs?si=tpHBXwKrsTQsE1Z6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
             </div>            
         </div>
     </main>
 
     <!--FOOTER START-->
-    <div class="p-4 text-gray-500 font-bold text-center text-sm md:text-l">
+    <div class="p-4 text-[#3a3a3a] font-bold text-center text-sm md:text-l">
         <div class="flex items-center justify-center gap-1">
 
             <a href="https://www.linkedin.com/in/zoe2746/"
             target="_blank"
             rel="noopener noreferrer"
-            class="group inline-flex items-center transition duration-300 underline hover:text-[#00447a]">
+            class="group inline-flex items-center transition duration-300 underline hover:text-[#ec6300]">
 
                 LinkedIn
 
@@ -144,7 +230,7 @@
             <a href="https://www.behance.net/zoe2746"
             target="_blank"
             rel="noopener noreferrer"
-            class="group inline-flex items-center transition duration-300 underline hover:text-[#00447a]">
+            class="group inline-flex items-center transition duration-300 underline hover:text-[#ec6300]">
 
                 Behance
 
@@ -169,7 +255,7 @@
 
             <button
                 onclick="copyEmail()"
-                class="group underline hover:text-[#00447a] inline-flex items-center"
+                class="group underline hover:text-[#ec6300] inline-flex items-center"
             >
                 zoe2746@gmail.com
 
