@@ -101,10 +101,17 @@
                   This is the moment when Dog and Robot realize that Robot is broken, and it also becomes the moment when they are forced to separate. 
                   Since this scene is emotionally central to the movie, I wanted the player to return to that same place and give Robot another chance. 
                   Image on the left below is the actual scene from the movie, and the right is screenshot from my game.
-
-                    <div class="pt-4 flex justify-center">
-                        <img src="./assets/cg_robot/01_movie.png">
-                        <img src="./assets/cg_robot/01_me.png">
+                </div>
+                <div class="px-4 md:px-8 pt-4 flex justify-center">
+                    <div class="flex items-center max-w-full">
+                        <img
+                            src="./assets/cg_robot/01_movie.png"
+                            class="min-w-0 h-auto"
+                        >
+                        <img
+                            src="./assets/cg_robot/01_me.png"
+                            class="min-w-0 h-auto"
+                        >
                     </div>
                 </div>
                 
@@ -171,7 +178,7 @@
                 </div>
                 <div class="px-4 md:px-8">
                     <span class="font-bold">Seamless Cubemap</span><br>
-                    I wanted the scene to feel like it extended into the distance, but stretching only certain parts of the image without creating visible seams was hard. Because of this, from some angles, the viewer can still tell that the environment is a box. I am very sad.
+                    I wanted the scene to feel like it extended into the distance, but stretching only certain parts of the image without creating visible seams was hard. Because of this, from some angles, the viewer can still tell that the environment is a box.
                     <br><br>
                     <span class="font-bold">First Person View / View Changing</span><br>
                     Initially I planned to have the game played from first person view, and there are boosters that switches shortly back to third person view which is easier for the player to operate. However, after implementation, I found out it would be very, very difficult for the player detect and run to items, since it requires looking up and moving around, and also has to be fast enough. It is almost impossible to collect any flowers. So, eventually I had to remove first person view.
@@ -189,8 +196,8 @@
                 <div class="inline-block font-bold text-white px-6 py-2 m-2 mt-6 mb-4 bg-[#ec6300] rounded-3xl w-fit">
                     Demo
                 </div>
-                <div class="items-center">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/agHu9eUwmDs?si=tpHBXwKrsTQsE1Z6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="items-center px-4 md:px-8">
+                    <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/agHu9eUwmDs?si=tpHBXwKrsTQsE1Z6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
 
             </div>            
